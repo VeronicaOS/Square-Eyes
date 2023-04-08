@@ -18,7 +18,6 @@ header {
     color: white;
     font-size: medium;
     padding-right: 20px;
-    margin-bottom: 60px;
 }
 
 .logo {
@@ -44,7 +43,6 @@ footer {
     background-color: #302a2643;
     color: white;
     font-size: small;
-    margin-top: 60px;
 }
 
 .footer-content {
@@ -82,4 +80,12 @@ li {
 
 ul {
     padding: 0;
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+    scale: 1.2;
 }

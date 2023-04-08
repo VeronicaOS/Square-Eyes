@@ -1,5 +1,168 @@
-.container {
+.contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 15% 30% 35% 15%;
+    color: white;
+    position: relative;
 }
+
+.collage {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 4;
+    margin-top: 20px;
+}
+
+.collage img {
+    width: 350px;
+    height: 100%;
+}
+
+.text-box-1 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    font-size: 1em;
+    position: absolute;
+    bottom: 0;
+}
+
+.text-box-2 {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.dialog-1 {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 194px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.dialog-1 i {
+    color: #A14405;
+    padding-right: 10px;
+}
+
+
+.text-box-3 {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+.dialog-2 {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 194px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.dialog-2 p {
+    margin-bottom: 0;
+}
+
+
+.text-box-4 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    position: absolute;
+    top: 0;
+}
+
+.dialog-3 {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 242px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+input {
+    background-color: #A14405;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-family: 'raleway', sans-serif;
+    border-radius: 3px;
+    border: none;
+}
+
+#name , #email {
+    width: 45%;
+}
+
+
+input[type=button] {
+    color: white;
+    cursor: pointer;
+}
+
+#message {
+    height: 85px;
+    width: 92%;    
+}
+
+
+.socials-2 {
+    padding-top: 18px;
+}
+
+.socials-2 a {
+    padding: 2px;
+    color: white;
+    text-decoration: none;
+}
+
+.text-box-5 {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+    position: absolute;
+    top: 0;
+}
+
+.dialog-4 {
+    display: flex;
+    flex-direction: column;
+    width: 309px;
+    height: 194px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+
+.dialog-4 i {
+    color: #A14405;
+    padding-right: 10px;
+}
+
+.list li {
+    display: list-item;
+    list-style: circle;
+    margin: 5px 25px
+}
+
+.text-box-7 {
+    grid-column: 3 /span 1;
+    grid-row: 4 / span 1;
+    position: relative;
+}
+
+.text-box-7 img {
+    width: 450px;
+    position: absolute;
+    right: 0;
+    bottom: -104px;
+}
+

@@ -1,7 +1,57 @@
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    width: 100%;
+    height: 100%;
+margin-top: 60px;
+margin-bottom: 60px;
+}
+
 .dialog {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 500px;
-    background-color: gray;
+    width: 800px;
+    height: 650px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 40px;
+    position: relative;
+}
+
+hr {
+    border-color: #A14405;
+}
+
+.price {
+position: absolute;
+    right: 40px;
+}
+
+.dialog img {
+    width: 105;
+    height: 150px;
+}
+
+.elvis {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-left: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.title {
+position: absolute;
+bottom: 2px;
+left: 130px;
+}
+
+.checkout-empty-container {
+    color: white;
+    width: 100%;
+    height: 100%;
 }

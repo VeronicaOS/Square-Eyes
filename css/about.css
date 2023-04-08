@@ -1,6 +1,7 @@
 .about-container {
     color: white;
     display: grid;
+    size: 100%;
     grid-template-columns: 40% 60%;
     grid-template-rows: 40% 40% 20%;
 }
@@ -8,6 +9,11 @@
 .collage {
     grid-column: 1 / span 1;
     grid-row: 1 / span 3;
+}
+
+.collage img {
+    width: 350px;
+    height: 100%;
 }
 
 .Main-title {
@@ -46,22 +52,17 @@ padding: 20px 100px;
 .text-box-3 {
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    align-items: right;
-    display: flex;
-    justify-content: right;
-    position: fixed;
-    bottom: 38px;
-    right: 0;
+    position: relative;
 }
 
 .text-box-3 img {
     width: 450px;
+    position: absolute;
+    right: 0;
+    bottom: -81px;
 }
 
-.collage img {
-    width: 350px;
-    height: 100%;
-}
+
 
 @media(max-width:796px) {
     .collage {
