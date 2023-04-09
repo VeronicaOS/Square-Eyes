@@ -1,10 +1,12 @@
 .video_detail-container {
     display: grid;
     grid-template-columns: 20% 35% 45%;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 1fr 1fr;
     color: white;
-    size: 100%;
+    width: 100%;
+    height: 100%;
     position: relative;
+    margin-top: 60px;
 }
 
 .image-info {
@@ -13,6 +15,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+hr {
+    border-color: #A14405;
+    border-left: 0;
 }
 
 .row {
@@ -37,11 +44,52 @@ h1 {
     font-size: 20px;
 }
 
+.dialog {
+    width: 78px;
+    height: 37px;
+    background-color: #E4DAD324;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 7px 14px;
+}
+
+.heart-purchase {
+    display: flex;
+    flex-direction: row;
+}
+
+.heart-purchase i {
+    margin: 10px;
+    padding-right: 10px;
+    color: #A14405;
+    text-decoration: none;
+}
+
+input {
+    background-color: #A14405;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-family: 'raleway', sans-serif;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
 .extra-info {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
     display: flex;
     flex-direction: column;
+    padding-left: 72px;
+    font-size: 18px;
+}
+
+.list li {
+    display: list-item;
+    list-style: none;
+    margin: 5px 0px
 }
 
 .trailer {
@@ -52,4 +100,18 @@ h1 {
 }
 
 
+.trailer1 {
+    position: relative;
+    display: inline-block;
+}
+.trailer1 .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.trailer1:hover .img-top {
+    display: inline;
+}
 

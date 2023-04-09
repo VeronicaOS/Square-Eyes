@@ -1,7 +1,7 @@
 body {
     display: flex;
     margin: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-image: linear-gradient(to right, #A14405, black 25%);
     flex-direction: column;
@@ -35,6 +35,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100%;
 }
 
 footer {
