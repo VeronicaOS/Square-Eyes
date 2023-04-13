@@ -1,79 +1,81 @@
 .about-container {
     color: white;
-    display: grid;
-    size: 100%;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 40% 40% 20%;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin-top: 5rem;
 }
 
-.collage {
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 3;
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    size: auto;
+    position: relative;
+    margin-top: 4rem;
 }
 
 .collage img {
-    width: 350px;
-    height: 100%;
+    width: auto;
+    height: auto;
 }
 
 .Main-title {
-    font-size: 40px;
+    font-size: 4rem;
 }
 
 .subtitle {
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .text {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .text-box-1 {
-grid-column: 2 / span 1;
-grid-row: 1 / span 1;
 box-sizing: border-box;
 padding: 20px 100px;
-
 }
 
-.text-box-2 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1; 
+.text-box-2 { 
     box-sizing: border-box;
     padding: 0px 100px; 
-    z-index: 999;
 }
 
-.text-box-2 img {
+.img1 {
     bottom: 0;
     right: 0;
 }
 
-.text-box-3 {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-    position: relative;
-}
-
-.text-box-3 img {
+@media only screen and (min-width:962px){
+    .img1 {
     width: 450px;
     position: absolute;
     right: 0;
-    bottom: -81px;
+    }
+    .img2 {
+        display: none;
+    }
 }
-
-
-
-@media(max-width:796px) {
+ 
+@media only screen and (max-width:961px){ 
     .collage {
         display: none;
     }
     .about-container {
         display: flex;
         flex-direction: column;
-        margin-top: 60px;
+        width: auto;
+        margin-top: 14rem;
     }
-    .text-box-1, .text-box-2 {
-        padding: 20px;
+    .img1 {
+        display: none;
+    }
+    .img2 {
+        width: 100%;
+    }
+    .text-box-1,
+    .text-box-2 {
+        padding: 20px 40px;
     }
 }
+

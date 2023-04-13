@@ -1,12 +1,18 @@
-body {
-    display: flex;
-    margin: 0;
-    height: 100%;
-    width: 100vw;
-    background-image: linear-gradient(to right, #A14405, black 25%);
-    flex-direction: column;
-    font-family: 'Raleway', sans-serif;
+html {
+    font-size: 62.5%;
+    color: black;
+    
 }
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to right, #A14405, black 25%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 header {
     height: 50px;
@@ -14,28 +20,25 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #302a2643;
+    background-color: #29150b;
     color: white;
     font-size: medium;
     padding-right: 20px;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
 }
 
 .logo {
     width: 400px;
 }
 
-
 .profile a {
     padding: 7px;
     color: white;
     text-decoration: none;
-}
-
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
 }
 
 footer {
@@ -44,6 +47,7 @@ footer {
     background-color: #302a2643;
     color: white;
     font-size: small;
+    
 }
 
 .footer-content {
@@ -53,7 +57,7 @@ footer {
     justify-content: space-between;
 }
 
-.footer-nav a {
+body a {
     color: white;
     text-decoration: none;
     padding: 10px;
@@ -63,12 +67,6 @@ footer {
     padding: 2px;
     color: white;
     text-decoration: none;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
 }
 
 .active {
@@ -83,10 +81,47 @@ ul {
     padding: 0;
 }
 
-.grow {
-    transition: all .2s ease-in-out;
+hr {
+    margin-left: 0;
+    margin-right: 0;
 }
+.grow:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;}
 
-.grow:hover {
-    scale: 1.2;
+@media only screen and (min-width:746px){   
+}
+  
+@media only screen and (max-width:961px){ 
+    header {
+        height: max-content;
+        gap: 0;
+        } 
+    header nav ul {
+       display: flex;
+       flex-direction:column;
+       flex-wrap: nowrap;
+       gap: 1rem;
+    }  
+    .logo {
+        width:fit-content;
+    }
+    .profile a {
+       display:flex;
+       justify-content: center;
+    }
+    footer {
+        height: fit-content;
+    }
+    .footer-content {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+    .footer-nav {
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }

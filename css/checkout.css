@@ -4,8 +4,8 @@
     color: white;
     width: 100%;
     height: 100%;
-margin-top: 60px;
-margin-bottom: 60px;
+    margin: 11rem 0;
+    align-items: center;
 }
 
 .dialog {
@@ -21,12 +21,24 @@ margin-bottom: 60px;
     position: relative;
 }
 
+.dialog-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 hr {
     border-color: #A14405;
 }
 
 .price {
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end
+}
+
+.checkout-form a {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .dialog img {
@@ -44,15 +56,23 @@ hr {
 }
 
 .title {
-position: absolute;
-bottom: 2px;
-left: 130px;
+    position: absolute;
+    bottom: 2px;
+    left: 130px;
 }
 
 .checkout-empty-container {
     color: white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 16rem;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
 }
 
 input[type=button] {
@@ -65,4 +85,14 @@ input[type=button] {
     border-radius: 3px;
     border: none;
     cursor: pointer;
+}
+
+@media only screen and (max-width:746px){
+    
+}
+    
+@media only screen and (max-width:961px){
+    .checkout-empty-container {
+        margin-top: 26rem;
+    }
 }

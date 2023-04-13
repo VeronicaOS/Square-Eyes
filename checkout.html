@@ -49,24 +49,28 @@
         </header>
         <main class="checkout-container">
             <div class="dialog">
-                <div class="dialog-header">
+                <div class="dialog-content">
                     <h1>Shopping cart</h1>
-                <p class="price">Price</p>
-                <p><hr /></p>
-                <div class="elvis">
-                    <img src="images/Popular/Elvis.png" alt="" />
-                    <p class="title">Elvis</p>
-                    <p>$ 17.99</p>
-                </div>
-                <hr />
-                <p>Subtotal (1 item) $ 17.99</p>
-                <form>
-                    <label for="saved payment"> Use the payment information saved on your profile </label>
-                    <input type="checkbox" id="saved-payment" name="saved payment" value="saved">
-                    <label for="new payment"> Use a different payment method </label>
-                    <input type="checkbox" id="different-payment" name="different payment" value="different">
-                    <a href="checkout_success.html"><input type="button" value="Purchase"></a>
-                </form>
+                    <p class="price">Price</p>
+                    <p><hr /></p>
+                    <div class="elvis">
+                        <img src="images/Popular/Elvis.png" alt="" />
+                        <p class="title">Elvis</p>
+                        <p>$ 17.99</p>
+                    </div>
+                    <hr />
+                    <p>Subtotal (1 item) $ 17.99</p>
+                    <form class="checkout-form">
+                        <div>
+                            <input type="checkbox" id="saved-payment" name="saved payment" value="saved">
+                            <label for="saved payment"> Use the payment information saved on your profile </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="different-payment" name="different payment" value="different">
+                            <label for="new payment"> Use a different payment method </label>
+                        </div>
+                        <a href="checkout_success.html"><input type="button" value="Purchase"></a>
+                    </form>
                 </div>
             </div>
             <h3>Continue browsing</h3>

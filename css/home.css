@@ -3,7 +3,7 @@
     display: grid;
     width: 100%;
     min-height: 100%;
-    margin-bottom: 60px;
+    margin: 5rem 0;
 }
 
 .text {
@@ -12,26 +12,30 @@
 
 .grid-container {
     display: grid;
+    padding: 0 6rem;
     grid-template-rows: repeat(8, 35px, 200px);
-gap: 10px;
-width: 100%;
-justify-content: center;
-    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.grid-container div {
+    overflow: scroll;
+    flex-wrap: nowrap;
 }
 
 .sort-by1 {
     grid-column: 1;
-grid-row:  1 / span 1;
+    grid-row:  1 / span 1;
 }
 
 .sort-by2 {
     grid-column: 1;
-grid-row:  3 / span 1;
+    grid-row:  3 / span 1;
 }
 
 .sort-by3 {
     grid-column: 1;
-grid-row:  7 / span 1;
+    grid-row:  7 / span 1;
 }
 
 .video1 {
@@ -57,9 +61,9 @@ grid-row:  7 / span 1;
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: 2;
-gap: 10px;
-width: 100%;
-justify-content: center;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
     grid-column: 1;
     grid-row: 5 / span 2;
@@ -72,11 +76,50 @@ justify-content: center;
     grid-column: 1;
     grid-row: 1;
     text-align: center;
-    padding-left: 10%;
+    padding-left: 1rem;
 }
 
 .avatar {
     display: grid;
     grid-column: 2;
     grid-row: 1;
+}
+
+.home-img img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+@media only screen and (max-width:992px) and (min-width:746px){   
+    .spotlight {
+        display: flex;
+        flex-direction: column;
+        margin: -2rem;
+    }
+    .spotlight img {
+        width: 50rem;
+    }
+    .home-container {
+        margin-top: 16.5rem;
+        width: 100%;
+    }
+}
+    
+@media only screen and (max-width:745px){
+    .spotlight {
+        display: flex;
+        flex-direction: column;
+        margin: -2rem;
+    }
+    .spotlight img {
+        width: 30rem;
+    }
+    .grid-container {
+        padding: 0 2rem;
+    }
+    .home-container {
+        margin-top: 16.5rem;
+    }
 }

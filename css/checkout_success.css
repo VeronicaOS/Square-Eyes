@@ -2,23 +2,25 @@
     display: flex;
     flex-direction: column;
     color: white;
-    width: 100%;
+    width: 95%;
     height: 100%;
-margin-top: 60px;
-margin-bottom: 60px;
+    margin: 11rem 2rem;
+    align-items: center;
 }
 
 .dialog {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 800px;
+    width: auto;
     height: 650px;
     background-color: #E4DAD324;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px 40px;
     position: relative;
+    text-align: center;
+    overflow: auto;
 }
 
 .dialog2 {
@@ -26,11 +28,19 @@ margin-bottom: 60px;
     align-items: flex-start;
     flex-direction: column;
     width: 400px;
-    height: 325px;
+    height:fit-content;
     background-color: #F4F4F462;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px 40px;
+    position: relative;
+}
+
+.dialog2-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -41,4 +51,13 @@ margin-bottom: 60px;
 
 hr {
     border-color: #A14405;
+    width: max-content;
+}
+
+@media only screen and (min-width:746px){
+    
+}
+    
+@media only screen and (max-width:745px){
+
 }

@@ -1,9 +1,12 @@
 .contact-container {
     display: grid;
-    grid-template-columns: 40% 30% 30%;
-    grid-template-rows: 15% 30% 35% 15%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 2fr;
+    gap: 1rem;
     color: white;
     position: relative;
+    width: 100%;
+    margin-top: 5rem;
 }
 
 .collage {
@@ -15,19 +18,6 @@
 .collage img {
     width: 350px;
     height: 100%;
-}
-
-.text-box-1 {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    font-size: 1em;
-    position: absolute;
-    bottom: 0;
-}
-
-.text-box-2 {
-    grid-column: 2 / span 1;
-    grid-row: 2 / span 1;
 }
 
 .dialog-1 {
@@ -46,12 +36,6 @@
     padding-right: 10px;
 }
 
-
-.text-box-3 {
-    grid-column: 3 / span 1;
-    grid-row: 2 / span 1;
-}
-
 .dialog-2 {
     display: flex;
     flex-direction: column;
@@ -60,21 +44,12 @@
     background-color: #E4DAD324;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 10px 30px;
 }
 
 .dialog-2 p {
     margin-bottom: 0;
-}
-
-
-.text-box-4 {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-    position: absolute;
-    top: 0;
+    margin-top: 2px;
 }
 
 .dialog-3 {
@@ -88,7 +63,7 @@
     padding: 10px 20px;
 }
 
-input {
+input, textarea {
     background-color: #A14405;
     padding: 5px 10px;
     margin: 5px 0;
@@ -96,6 +71,20 @@ input {
     font-family: 'raleway', sans-serif;
     border-radius: 3px;
     border: none;
+}
+
+input {
+    color: white;
+}
+
+textarea {
+    height: 85px;
+    width: 92%;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: white;
 }
 
 #name , #email {
@@ -108,11 +97,9 @@ input[type=button] {
     cursor: pointer;
 }
 
-#message {
-    height: 85px;
-    width: 92%;    
+input::placeholder {
+    color: white
 }
-
 
 .socials-2 {
     padding-top: 18px;
@@ -122,13 +109,6 @@ input[type=button] {
     padding: 2px;
     color: white;
     text-decoration: none;
-}
-
-.text-box-5 {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-    position: absolute;
-    top: 0;
 }
 
 .dialog-4 {
@@ -149,20 +129,137 @@ input[type=button] {
 
 .list li {
     display: list-item;
-    list-style: circle;
-    margin: 5px 25px
+    margin: 5px;
 }
 
-.text-box-7 {
-    grid-column: 3 /span 1;
-    grid-row: 4 / span 1;
-    position: relative;
+@media only screen and (min-width:961px){
+    .text-box-1 {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        font-size: 1em;
+        position: absolute;
+        bottom: 0;
+    }
+    .text-box-2 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .text-box-3 {
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .text-box-5 {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        position: absolute;
+        top: 0;
+    }
+    .text-box-4 {
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+        position: absolute;
+        top: 0;
+    }
+    .text-box-6 {
+        grid-column: 3 /span 1;
+        grid-row: 4 / span 1;
+        position: relative;
+    }
+    .img1 {
+        width: 450px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .img2 {
+        display: none;
+    }
 }
 
-.text-box-7 img {
-    width: 450px;
-    position: absolute;
-    right: 0;
-    bottom: -104px;
+@media only screen and (max-width:961px) and (min-width:746px) {
+    .img2 {
+        display: none;
+    }
+    .img1 {
+        overflow: hidden;
+        width: 450px;
+    }
+    .collage {
+        display: none;
+    }
+    
+    .contact-container {
+     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 2fr; 
+    margin-top: 20rem;
+    align-content: center;
+    justify-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0 2rem;
+    
+    }
+    .text-box-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        font-size: 1em;
+        position: absolute;
+        bottom: 0;
+    }
+    .text-box-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .text-box-3 {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .text-box-5 {
+        display: flex;
+        flex-direction: column;
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+        position: absolute;
+        top: 0;
+    }
+    .text-box-4 {
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 1;
+        position: absolute;
+        top: 0;
+    }
+    .text-box-6 {
+        grid-column: 2 /span 1;
+        grid-row: 4 / span 1;
+    }
+    
 }
+    
+@media only screen and (max-width:745px){
+    .collage {
+        display: none;
+    }
+    .img1 {
+        display: none;
+    }
+    .img2 {
+        width: 100%;
+    }
+    .contact-container {
+        display:flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 20rem;
+    }
 
+    .text-box-5 {
+        order: 98;
+    }
+
+    .text-box-6 {
+        order: 99;
+    }
+}
