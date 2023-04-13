@@ -63,7 +63,7 @@ h1 {
 }
 
 input {
-    background-color: #A14405;
+    background-color:#A14405; 
     color: white;
     padding: 5px 10px;
     margin: 5px 0;
@@ -72,6 +72,11 @@ input {
     border-radius: 3px;
     border: none;
     cursor: pointer;
+}
+
+.clicked input {
+    background-color: white;
+    color: #A14405;
 }
 
 .extra-info {
@@ -124,6 +129,7 @@ input {
         align-content: center;
         flex-wrap: wrap;
         text-align: center;
+        margin-top: 23rem;
     }
     .synopsis {
         display: flex;

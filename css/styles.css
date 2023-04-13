@@ -1,7 +1,5 @@
 html {
     font-size: 62.5%;
-    color: black;
-    
 }
 
 body {
@@ -17,28 +15,25 @@ body {
 header {
     height: 50px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: #29150b;
-    color: white;
-    font-size: medium;
-    padding-right: 20px;
-    gap: 1rem;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
 }
 
 .logo {
-    width: 400px;
+    width: 40rem;
+}
+
+.profile {
+    padding: 7px;
 }
 
 .profile a {
-    padding: 7px;
-    color: white;
-    text-decoration: none;
+    width: max-content;
 }
 
 footer {
@@ -107,9 +102,10 @@ hr {
     .logo {
         width:fit-content;
     }
-    .profile a {
+    .profile {
        display:flex;
-       justify-content: center;
+       flex-direction: column;
+       align-items: center;
     }
     footer {
         height: fit-content;

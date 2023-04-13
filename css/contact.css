@@ -7,6 +7,7 @@
     position: relative;
     width: 100%;
     margin-top: 5rem;
+    overflow: unset;
 }
 
 .collage {
@@ -183,8 +184,10 @@ input::placeholder {
         display: none;
     }
     .img1 {
-        overflow: hidden;
         width: 450px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     }
     .collage {
         display: none;
@@ -197,8 +200,9 @@ input::placeholder {
     align-content: center;
     justify-items: center;
     height: 100vh;
-    width: 100%;
+    width: 95%;
     padding: 0 2rem;
+    overflow: unset;
     
     }
     .text-box-1 {
@@ -233,6 +237,7 @@ input::placeholder {
     .text-box-6 {
         grid-column: 2 /span 1;
         grid-row: 4 / span 1;
+        padding: 0 10rem;
     }
     
 }
@@ -245,7 +250,8 @@ input::placeholder {
         display: none;
     }
     .img2 {
-        width: 100%;
+        max-width: 100%;
+        overflow: unset;
     }
     .contact-container {
         display:flex;
@@ -253,6 +259,8 @@ input::placeholder {
         gap: 2rem;
         align-items: center;
         margin-top: 20rem;
+        overflow: unset;
+        width: 100%;
     }
 
     .text-box-5 {
@@ -261,5 +269,6 @@ input::placeholder {
 
     .text-box-6 {
         order: 99;
+        padding: 0 7rem;
     }
 }

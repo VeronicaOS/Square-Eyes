@@ -4,8 +4,8 @@
     flex-direction: column;
 width: 90%;
 min-height: 100%;
-margin: 6rem 6rem;
-justify-content: center;
+margin: 10rem 6rem;
+padding-left: 2%;
 }
 
 .videos-container div {

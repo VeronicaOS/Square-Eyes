@@ -12,8 +12,8 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 800px;
-    height: 650px;
+    width: 50%;
+    height: 100%;
     background-color: #E4DAD324;
     border-radius: 5px;
     box-sizing: border-box;
@@ -29,11 +29,11 @@
 
 hr {
     border-color: #A14405;
+
 }
 
 .price {
-    display: flex;
-    justify-content: flex-end
+    align-self: self-end;
 }
 
 .checkout-form a {
@@ -50,10 +50,23 @@ hr {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    padding-left: 20px;
     justify-content: space-between;
     position: relative;
+    margin: 2rem 0 2rem 2rem;
 }
+
+.subtotal {
+    text-align: right;
+    margin-bottom: 3rem;
+}
+
+.checkout-container input[type:checkbox] {
+    opacity: 1rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    gap: 2rem;
+  }
 
 .title {
     position: absolute;
@@ -73,6 +86,7 @@ hr {
 .checkout-form {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 input[type=button] {
@@ -93,6 +107,21 @@ input[type=button] {
     
 @media only screen and (max-width:961px){
     .checkout-empty-container {
-        margin-top: 26rem;
+        margin-top: 23rem 0 6rem 0;
+    }
+    .checkout-container {
+        margin: 23rem 0 6rem 0;
+    }
+    .elvis {
+        flex-direction: column;
+    }
+    .price1 {
+        align-self: self-end;
+    }
+    .title {
+        position: initial;
+    }
+    .dialog {
+        width: 90%;
     }
 }
