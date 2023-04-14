@@ -9,50 +9,46 @@
 }
 
 .dialog {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
     width: 50%;
-    height: 100%;
     background-color: #E4DAD324;
     border-radius: 5px;
     box-sizing: border-box;
     padding: 10px 40px;
-    position: relative;
 }
 
 .dialog-content {
-    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-hr {
-    border-color: #A14405;
-
+h1 {
+    align-self: center;
 }
 
 .price {
     align-self: self-end;
 }
 
-.checkout-form a {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.dialog img {
-    width: 105;
-    height: 150px;
+hr {
+    border-color: #A14405;
 }
 
 .elvis {
     display: flex;
-    flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
     position: relative;
     margin: 2rem 0 2rem 2rem;
+}
+
+.elvis img {
+    width: 12rem;
+}
+
+.title {
+    position: absolute;
+    bottom: 2px;
+    left: 130px;
 }
 
 .subtotal {
@@ -60,19 +56,29 @@ hr {
     margin-bottom: 3rem;
 }
 
-.checkout-container input[type:checkbox] {
-    opacity: 1rem;
-    cursor: pointer;
-    height: 1.5rem;
-    width: 1.5rem;
+.checkout-form {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
-  }
-
-.title {
-    position: absolute;
-    bottom: 2px;
-    left: 130px;
 }
+
+.checkout-form a {
+    display: flex;
+    justify-content: flex-end;
+}
+  
+input[type=button] {
+    background-color: #A14405;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-family: 'raleway', sans-serif;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+
 
 .checkout-empty-container {
     color: white;
@@ -83,26 +89,12 @@ hr {
     margin-top: 16rem;
 }
 
-.checkout-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
-input[type=button] {
-    background-color: #A14405;
-    color: white;
-    padding: 5px 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    font-family: 'raleway', sans-serif;
-    border-radius: 3px;
-    border: none;
-    cursor: pointer;
-}
 
-@media only screen and (max-width:746px){
-    
+
+
+h2 {
+    font-size: 2rem;
 }
     
 @media only screen and (max-width:961px){
@@ -112,16 +104,23 @@ input[type=button] {
     .checkout-container {
         margin: 23rem 0 6rem 0;
     }
+    .dialog {
+        width: 90%;
+    }
     .elvis {
         flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
     }
-    .price1 {
-        align-self: self-end;
+    .price1,
+    .subtotal {
+        align-self: center;
+    }
+    .price {
+        display: none;
     }
     .title {
         position: initial;
     }
-    .dialog {
-        width: 90%;
-    }
+    
 }

@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    background-image: linear-gradient(to right, #A14405, black 25%);
+    background-image: linear-gradient(to right, #A14405, black 40%);
     font-family: 'Raleway', sans-serif;
     font-size: 1.6rem;
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@ hr {
     margin-left: 0;
     margin-right: 0;
 }
-.grow:hover{
+.grow a:hover{
     transform: scale(1.1);
     transform-origin: center;
     transition: transform 0.2s ease-in-out;}

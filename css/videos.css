@@ -2,36 +2,29 @@
     color: white;
     display: flex;
     flex-direction: column;
-width: 90%;
-min-height: 100%;
-margin: 10rem 6rem;
-padding-left: 2%;
+    width: 90%;
+    min-height: 100%;
+    margin: 10rem 6rem;
+    padding-left: 2%;
 }
 
 .videos-container div {
     display: flex;
-    justify-content: left;
     overflow: scroll;
+    overflow-y: hidden;
     flex-wrap: nowrap;
-}
-
-.videos-container h2 {
-    display: flex;
-    justify-content: left;
-}
-
-.videolist {
-    flex-direction: row;
     gap: 1em;
 }
 
-#nmbr {
-    height: 94px;
-    width: 35px;
-    padding-top: 40px;
+h1,
+h2 {
+    padding: 1%;
 }
 
-@media only screen and (min-width:746px){
+#nmbr {
+    height: 10rem;
+    width: 10rem;
+    padding-top: 5rem;
 }
 
 @media only screen and (max-width:745px){ 
