@@ -3,7 +3,7 @@
     flex-direction: column;
     color: white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 11rem 0;
     align-items: center;
 }
@@ -11,9 +11,9 @@
 .dialog {
     width: 50%;
     background-color: #E4DAD324;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    padding: 10px 40px;
+    padding: 1rem 4rem;
 }
 
 .dialog-content {
@@ -47,8 +47,8 @@ hr {
 
 .title {
     position: absolute;
-    bottom: 2px;
-    left: 130px;
+    bottom: 0.2rem;
+    left: 13rem;
 }
 
 .subtotal {
@@ -63,64 +63,54 @@ hr {
 }
 
 .checkout-form a {
-    display: flex;
-    justify-content: flex-end;
+    align-self: flex-end;
+    width: 7.5rem;
 }
   
 input[type=button] {
     background-color: #A14405;
     color: white;
-    padding: 5px 10px;
-    margin: 5px 0;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
     font-family: 'raleway', sans-serif;
-    border-radius: 3px;
+    border-radius: 0.3rem;
     border: none;
     cursor: pointer;
 }
 
-
-
-.checkout-empty-container {
-    color: white;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    margin-top: 16rem;
-}
-
-
-
-
-
 h2 {
     font-size: 2rem;
 }
-    
-@media only screen and (max-width:961px){
-    .checkout-empty-container {
-        margin-top: 23rem 0 6rem 0;
-    }
-    .checkout-container {
-        margin: 23rem 0 6rem 0;
-    }
+
+.checkout_empty-container {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    margin-top: 16rem;
+}
+   
+@media only screen and (max-width:960px){
     .dialog {
         width: 90%;
     }
+
     .elvis {
         flex-direction: column;
         align-items: center;
         margin-bottom: 0;
     }
+
     .price1,
     .subtotal {
         align-self: center;
     }
+
     .price {
         display: none;
     }
+
     .title {
         position: initial;
     }
-    
 }

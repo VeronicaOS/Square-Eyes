@@ -4,93 +4,98 @@
         <title>Square Eyes | Video list page</title>
         <meta
             name="description"
-            content="This is the videolist page for Square Eyes where you will see the vidoes listed in different categories"
-       >
+            content="This is the videolist page for Square Eyes where you will see the vidoes listed in different categories">
         <meta name="viewport" content="widt=device-width, initial-scale=1.0">
         <link href="css/styles.css" rel="stylesheet">
         <link href="css/videos.css" rel="stylesheet">
         <link
             rel="stylesheet"
-            href="data/font-awesome/css/font-awesome.min.css"
-       >
+            href="data/font-awesome/css/font-awesome.min.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
-            rel="stylesheet"
-       >
+            rel="stylesheet">
     </head>
     <body>
         <header>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="videos.html" class="active">Videos</a></li>
-                    <li><a href="library.html">Library</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-checkbox" />
+                <label for="menu-checkbox" class="hamburger-icon"><i class="fa fa-bars" aria-hidden="true"></i></label>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="videos.html" class="active">Videos</a>
+                    <a href="library.html">Library</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <br />
+                    <div class="mobile">
+                        <a href="#">Search</a>
+                        <a href="#">Heart list</a>
+                        <a href="#">Log in</a>
+                    </div>
+                </nav>
+            </div>
             <div class="logo">
                 <a href="index.html">
                     <img src="images/logo.png" alt="SquareEyes logo with an orange square/rectangle around the word square">
                 </a>
             </div>
             <div class="profile">
-                <a href="#">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <a href="#" class="desktop">
+                    <i class="fa fa-search desktop" aria-hidden="true" alt="magnifying glass icon"></i>
                 </a>
-                <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
+                <a href="#" class="desktop">
+                    <i class="fa fa-heart" aria-hidden="true" alt="heart icon"></i>
                 </a>
                 <a href="checkout_empty.html">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i class="fa fa-shopping-cart" aria-hidden="true" alt="shopping cart icon"></i>
                 </a>
-                <a href="#"> Log in </a>
+                <a href="#" class="desktop"> Log in </a>
             </div>
         </header>
         <main class="videos-container">
             <h1>Categories</h1>
             <div class="sort-by"><h2>Popular</h2></div>
             <div class="videolist grow">
-                <a href="video_detail.html"><img src="images/Popular/Elvis.png" alt="Elvis: man with black hair in a white suite looking to the side"></a>
-                <a href="video_detail.html"><img src="images/Popular/Avatar2.png" alt="Avatar 2: depiction of a few of the species above water with big rocks and the sky in the background"></a>
-                <a href="video_detail.html"><img src="images/Popular/avatar.png" alt="Avatar: depiction of one of the humanoid species beside a man above grass, trees and a creature with wings"></a>
-                <a href="video_detail.html"><img src="images/Popular/jurassic-world.png" alt="Jurrasic World: seven people depicted on a shimmery yellow circle with a dinosaur skeleton in the middle"></a>
-                <a href="video_detail.html"><img src="images/Popular/marry-me.png" alt="Marry Me: a man and a woman walking down the street in conversation with posters in the background"></a>
-                <a href="video_detail.html"><img src="images/Popular/top-gun-maverick.png" alt="Top Gun: a man with dark hair walking towards you, with a jet plane in the background "></a>
-                <a href="video_detail.html"><img src="images/Popular/shazam.png" alt="Shazam: a man with dark hair in a red super hero suit blowing a bubblegum"></a>
+                <a href="video_detail.html"><img src="images/Popular/Elvis.png" alt="Elvis: man with black hair in a white suite looking to the side."></a>
+                <a href="video_detail.html"><img src="images/Popular/Avatar2.png" alt="Avatar 2: depiction of a few of the species above water with big rocks and the sky in the background."></a>
+                <a href="video_detail.html"><img src="images/Popular/avatar.png" alt="Avatar: depiction of one of the humanoid species beside a man above grass, trees and a creature with wings."></a>
+                <a href="video_detail.html"><img src="images/Popular/jurassic-world.png" alt="Jurrasic World: seven people depicted on a shimmery yellow circle with a dinosaur skeleton in the middle."><a>
+                <a href="video_detail.html"><img src="images/Popular/marry-me.png" alt="Marry me: a man and a woman walking down the street in conversation with posters in the background."></a>
+                <a href="video_detail.html"><img src="images/Popular/top-gun-maverick.png" alt="Top gun maverick: a man with dark hair walking towards you, with a jet plane in the background."></a>
+                <a href="video_detail.html"><img src="images/Popular/shazam.png" alt="Shazam: a man with dark hair in a red super hero suit blowing a bubblegum."></a>
             </div>
             <div class="sort-by"><h2>2022</h2></div>
             <div class="videolist grow">
-                <a href="video_detail.html"><img src="images/2022/the-adam-project.png" alt="The adam project: two people standing in the middle of a forrest, one of them is holding a flash light"></a>
+                <a href="video_detail.html"><img src="images/2022/the-adam-project.png" alt="The adam project: two people standing in the middle of a forrest, one of them is holding a flash light."></a>
                 <a href="video_detail.html"><img src="images/2022/shazam2.png" alt="Shazam 2: a closeup of a man with dark hair and a red superhero suit, five people in super hero suits below him and four people to his right side. There is also a lightening bolt behind him."></a>
-                <a href="video_detail.html"><img src="images/2022/the-twin.png" alt="The twin: inside a mirror we see a blonde woman holding on to a young girl with dark short hair and what looks like the same young girl in the back behind them"></a>
-                <a href="video_detail.html"><img src="images/2022/the-lost-city.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/2022/the-northman.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/2022/the-bunker-game.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/2022/the-contractor.png" alt=""></a>
+                <a href="video_detail.html"><img src="images/2022/the-twin.png" alt="The twin: inside a mirror we see a blonde woman holding on to a young girl with dark short hair and what looks like the same young girl in the back behind them."></a>
+                <a href="video_detail.html"><img src="images/2022/the-lost-city.png" alt="The lost city: Forest background with a group of people in the foreground and a close up of a man and a woman in the back."></a>
+                <a href="video_detail.html"><img src="images/2022/the-northman.png" alt="The northman: 7 people in the middle of the image, some of them holding weapons. Cloudy background."></a>
+                <a href="video_detail.html"><img src="images/2022/the-bunker-game.png" alt="The bunker game: red image with a human eye with an image in the pupil and iris of multiple people in a concrete hall"></a>
+                <a href="video_detail.html"><img src="images/2022/the-contractor.png" alt="The contractor: A man in the middle wearing a bulletproof vest. American flag in the background. "></a>
             </div>
             <div class="sort-by"><h2>Newcomers</h2></div>
             <div class="videolist grow">
-                <a href="video_detail.html"><img src="images/Newcomers/m3gan.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/shotgun-wedding.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/fast-furious.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/nightmare-alley.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/space-jam.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/it-chapter-two.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Newcomers/aladdin.png" alt=""></a>
+                <a href="video_detail.html"><img src="images/Newcomers/m3gan.png" alt="Megan: A human looking robot staring intensly sitting on a chair with her arms  in her lap"></a>
+                <a href="video_detail.html"><img src="images/Newcomers/shotgun-wedding.png" alt="Shotgun wedding: A bride and a groom with dirt smudges on their skin, bride holding a gun."></a>
+                <a href="video_detail.html"><img src="images/Newcomers/fast-furious.png" alt="Fast and furious - Hobbs & Shaw: 3 men and 2 women in the middle with cars, a motorbiker and a plane in the background with explosions."></a>
+                <a href="video_detail.html"><img src="images/Newcomers/nightmare-alley.png" alt="Nightmare alley: 4 people, a man in a hat, and three women looking upper class. Words in the background such as lust, greed and sins."></a>
+                <a href="video_detail.html"><img src="images/Newcomers/space-jam.png" alt="Space jam: A basketballplayer in the middle surrounded by the looney tunes characters all dressed in bachetball gear."></a>
+                <a href="video_detail.html"><img src="images/Newcomers/it-chapter-two.png" alt="It chapter 2: white image with the eyes of it. yellow glowy eyes with red scar running from the forehead and down through the middle of the eyes."></a>
+                <a href="video_detail.html"><img src="images/Newcomers/aladdin.png" alt="Aladdin: A man in the middle holding a magic lamp, another man in the background smiling, and a woman with a tiger"></a>
             </div>
             <div class="sort-by"><h2>Our top 5</h2></div>
             <div class="videolist grow">
-                <img id="nmbr" src="images/Top 5/1.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Top 5/Avatar2.png" alt=""></a>
-                <img id="nmbr" src="images/Top 5/2.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Top 5/knives-out.png" alt=""></a>
-                <img id="nmbr" src="images/Top 5/3.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Top 5/shazam2.png" alt=""></a>
-                <img id="nmbr" src="images/Top 5/4.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Top 5/little-women.png" alt=""></a>
-                <img id="nmbr" src="images/Top 5/5.png" alt=""></a>
-                <a href="video_detail.html"><img src="images/Top 5/shotgun-wedding.png" alt=""></a>
+                <img id="nmbr" src="images/Top 5/1.png" alt="The number 1 in in bold orange"></a>
+                <a href="video_detail.html"><img src="images/Top 5/Avatar2.png" alt="Avatar 2: depiction of a few of the species above water with big rocks and the sky in the background."></a>
+                <img id="nmbr" src="images/Top 5/2.png" alt="The number 2 in in bold orange"></a>
+                <a href="video_detail.html"><img src="images/Top 5/knives-out.png" alt="Knives out: A group of people in colorful clothing standing in a line with a man sitting in the middle in a red chair."></a>
+                <img id="nmbr" src="images/Top 5/3.png" alt="The number 3 in in bold orange"></a>
+                <a href="video_detail.html"><img src="images/Top 5/shazam2.png" alt="Shazam 2: a closeup of a man with dark hair and a red superhero suit, five people in super hero suits below him and four people to his right side. There is also a lightening bolt behind him."></a>
+                <img id="nmbr" src="images/Top 5/4.png" alt="The number 4 in in bold orange"></a>
+                <a href="video_detail.html"><img src="images/Top 5/little-women.png" alt="Little women: in the front is a woman running and smiling, in the back there are 3 woman and one man depicted vertically"></a>
+                <img id="nmbr" src="images/Top 5/5.png" alt="The number 5 in in bold orange"></a>
+                <a href="video_detail.html"><img src="images/Top 5/shotgun-wedding.png" alt="Shotgun wedding: A bride and a groom with dirt smudges on their skin, bride holding a gun."></a>
             </div>
         </main>
         <footer>

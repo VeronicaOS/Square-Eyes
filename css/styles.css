@@ -4,16 +4,14 @@ html {
 
 body {
     margin: 0;
-    background-image: linear-gradient(to right, #A14405, black 40%);
-    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(to right, #a14405, black 40%);
+    font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
-
 header {
-    height: 50px;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,12 +22,45 @@ header {
     z-index: 1;
 }
 
+/* Hamburger menu */
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-menu nav {
+    position: absolute;
+    background-color: #29150b;
+    box-sizing: border-box;
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+.hamburger-menu nav,
+#menu-checkbox {
+    display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+    display: block;
+}
+
+.hamburger-menu a {
+    display: block;
+    padding: 1rem 2rem;
+}
+
+.hamburger-icon {
+    padding: 2rem 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
 .logo {
     width: 40rem;
 }
 
 .profile {
-    padding: 7px;
+    padding: 0.7rem;
 }
 
 .profile a {
@@ -37,12 +68,11 @@ header {
 }
 
 footer {
-    height: 50px;
-    padding: 0 20px;
+    height: 5rem;
+    padding: 0 2rem;
     background-color: #302a2643;
     color: white;
     font-size: small;
-    
 }
 
 .footer-content {
@@ -55,11 +85,11 @@ footer {
 body a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .socials a {
-    padding: 2px;
+    padding: 0.2rem;
     color: white;
     text-decoration: none;
 }
@@ -80,44 +110,62 @@ hr {
     margin-left: 0;
     margin-right: 0;
 }
-.grow a:hover{
+
+.grow a:hover {
     transform: scale(1.1);
     transform-origin: center;
-    transition: transform 0.2s ease-in-out;}
-
-@media only screen and (min-width:746px){   
+    transition: transform 0.2s ease-in-out;
 }
-  
-@media only screen and (max-width:961px){ 
+
+@media only screen and (min-width: 961px) {
+    .hamburger-icon,
+    .mobile {
+        display: none;
+    }
+
+    .hamburger-menu nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: #29150b00;
+        padding: 0;
+    }
+
+    .hamburger-menu a {
+        padding: 1rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
     header {
-        height: max-content;
         gap: 0;
-        } 
-    header nav ul {
-       display: flex;
-       flex-direction:column;
-       flex-wrap: nowrap;
-       gap: 1rem;
-    }  
+    }
+
+    .desktop {
+        display: none;
+    }
+
     .logo {
-        width:fit-content;
+        width: fit-content;
     }
-    .profile {
-       display:flex;
-       flex-direction: column;
-       align-items: center;
-    }
+
     footer {
         height: fit-content;
     }
+
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
     .footer-content {
         flex-direction: column;
         padding-top: 1rem;
     }
+
     .footer-nav {
-        display:flex;
-        flex-direction: column;
-        flex-wrap: wrap;
         align-items: center;
     }
 }

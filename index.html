@@ -20,73 +20,131 @@
     </head>
     <body>
         <header>
-            <input type="checkbox" id="menu-checkbox">
-            <label for="menu-checkbox"><i class="fas fa-bars"></i></label>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="library.html">Library</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <br>
-                    <li><a href="#">Log in</a></li>
-                </ul>
-            </nav>
-            <nav class="nav-elements">
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                    <li><a href="library.html">Library</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-checkbox" />
+                <label for="menu-checkbox" class="hamburger-icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <nav>
+                    <a href="index.html" class="active">Home</a>
+                    <a href="videos.html">Videos</a>
+                    <a href="library.html">Library</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                    <br />
+                    <div class="mobile">
+                        <a href="#">Search</a>
+                        <a href="#">Heart list</a>
+                        <a href="#">Log in</a>
+                    </div>
+                </nav>
+            </div>
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="SquareEyes logo with an orange square/rectangle around the word square">
+                    <img
+                        src="images/logo.png"
+                        alt="SquareEyes logo with an orange square/rectangle around the word square"
+                    />
                 </a>
             </div>
             <div class="profile">
-                <a href="#">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                <a href="#" class="desktop">
+                    <i
+                        class="fa fa-search desktop"
+                        aria-hidden="true"
+                        alt="magnifying glass icon"
+                    ></i>
                 </a>
-                <a href="#">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
+                <a href="#" class="desktop">
+                    <i
+                        class="fa fa-heart"
+                        aria-hidden="true"
+                        alt="heart icon"
+                    ></i>
                 </a>
                 <a href="checkout_empty.html">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <i
+                        class="fa fa-shopping-cart"
+                        aria-hidden="true"
+                        alt="shopping cart icon"
+                    ></i>
                 </a>
-                <a href="#"> Log in </a>
+                <a href="#" class="desktop"> Log in </a>
             </div>
         </header>
         <main class="home-container">
             <div class="home-img">
-                <img src="images/home-image.png" alt="" />
+                <img
+                    src="images/home-image.png"
+                    alt="A huge canvas with a movie playing in front of a house and inbetween two palm trees that have a string of lights between them as well, and a huge couch in front of the canvas."
+                />
             </div>
             <div class="grid-container">
                 <div class="sort-by1">
                     <h1>Continue Watching</h1>
                 </div>
                 <div class="video1">
-                    <img src="images/Continue/Elvis.png" alt="" />
-                    <img src="images/Continue/The-Lost-City.png" alt="" />
-                    <img src="images/Continue/Top-Gun.png" alt="" />
+                    <img
+                        src="images/Continue/Elvis.png"
+                        alt="Elvis: a dark haired man and woman looking as if they are about to kiss."
+                    />
+                    <img
+                        src="images/Continue/The-Lost-City.png"
+                        alt="The lost city: a woman in a pink suit tied to a chair with a man wearing white trying to move her and the chair. They are in a jungle and there is a small car behind them."
+                    />
+                    <img
+                        src="images/Continue/Top-Gun.png"
+                        alt="Top gun: a man wearing a mask flying a jet plane."
+                    />
                 </div>
                 <div class="sort-by2">
                     <h2 class="heading">
-                        <a> <i class="fa fa-heart" aria-hidden="true" alt="heart"></i> </a>
+                        <a>
+                            <i
+                                class="fa fa-heart"
+                                aria-hidden="true"
+                                alt="heart icon"
+                            ></i>
+                        </a>
                         List
                     </h2>
                 </div>
                 <div class="video2 grow">
-                    <a href="video_detail.html"><img src="images/Heart-list/Avatar2.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/marry-me.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/venom.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/elvis.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/nightmare-alley.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/dune.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/Heart-list/the-lost-city.png" alt=""></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/Avatar2.png"
+                            alt="Avatar 2: depiction of a few of the species above water with big rocks and the sky in the background."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/marry-me.png"
+                            alt="Marry Me: a man and a woman walking down the street in conversation with posters in the background."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/venom.png"
+                            alt="Venom: Two creatures with a lot of teeth and a long tongue, 2 men and 2 women depicted in the middle."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/elvis.png"
+                            alt="Elvis: man with black hair in a white suite looking to the side."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/nightmare-alley.png"
+                            alt="Nightmare alley: 4 people, a man in a hat, and three women looking upper class. Words in the background such as lust, greed and sins."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/dune.png"
+                            alt="Dune: a bunch of people depicted in the middle. One man is depicted larger, with dark hair. 3 women and 4 men, all waring different looking clothes, one man wearing a cape with a hood."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/Heart-list/the-lost-city.png"
+                            alt="The lost city: Forest background with a group of people in the foreground and a close up of a man and a woman in the back."
+                    /></a>
                 </div>
                 <div class="spotlight">
                     <div class="avatar-text">
@@ -96,18 +154,49 @@
                         </p>
                     </div>
                     <div class="avatar">
-                        <img src="images/avatar-water.png" alt="">
+                        <img
+                            src="images/avatar-water.png"
+                            alt="Avatar the way of water: depiction of a few of the species, one riding/flying the other, above water with big rocks and the sky in the background."
+                        />
                     </div>
                 </div>
                 <div class="sort-by3"><h2 class="heading">For You</h2></div>
                 <div class="video3 grow">
-                    <a href="video_detail.html"><img src="images/For-you/cruella.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/i-still-believe.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/the-black-phone.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/palm-springs.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/top-gun-maverick.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/the-adam-project.png" alt=""></a>
-                    <a href="video_detail.html"><img src="images/For-you/dont-breathe.png" alt=""></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/cruella.png"
+                            alt="Cruella: a woman with half black and half white hair wearing all black, holding a walking stick with both hands behind her back "
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/i-still-believe.png"
+                            alt="I still believe: A man and a woman staring into each others eyes. The man has a red guitar strapped to his back."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/the-black-phone.png"
+                            alt="The black phone: a man waring a black top hat and a mask which gives him a big scary looking smile."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/palm-springs.png"
+                            alt="Palm springs: A man and a woman relaxing and floating on floties in a really long pool."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/top-gun-maverick.png"
+                            alt="Top gun maverick: a man with dark hair walking towards you, with a jet plane in the background."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/the-adam-project.png"
+                            alt="The adam project: two people standing in the middle of a forrest, one of them is holding a flash light."
+                    /></a>
+                    <a href="video_detail.html"
+                        ><img
+                            src="images/For-you/dont-breathe.png"
+                            alt="Don't breathe: a man behind glass or ice with his head through a large crack, looking tired hurt, holding a hammer."
+                    /></a>
                 </div>
             </div>
         </main>
@@ -115,13 +204,25 @@
             <div class="footer-content">
                 <div class="socials">
                     <a href="#">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i
+                            class="fa fa-instagram"
+                            aria-hidden="true"
+                            alt="instagram logo"
+                        ></i>
                     </a>
                     <a href="#">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                        <i
+                            class="fa fa-twitter"
+                            aria-hidden="true"
+                            alt="twitter logo"
+                        ></i>
                     </a>
                     <a href="#">
-                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        <i
+                            class="fa fa-facebook-square"
+                            aria-hidden="true"
+                            alt="facebook logo"
+                        ></i>
                     </a>
                 </div>
                 <ul class="footer-nav">

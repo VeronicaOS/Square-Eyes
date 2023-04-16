@@ -2,6 +2,7 @@
     color: white;
     display: flex;
     margin-top: 5rem;
+    height: 100%;
 }
 
 .grid-container {
@@ -13,8 +14,8 @@
 
 .text-box-1,
 .text-box-2 {
-box-sizing: border-box;
-padding: 2rem 15rem;
+    box-sizing: border-box;
+    padding: 2rem 11rem;
 }
 
 .Main-title {
@@ -29,38 +30,34 @@ padding: 2rem 15rem;
     font-size: 3rem;
 }
 
-@media only screen and (min-width:962px){
+@media only screen and (min-width: 991px) {
     .img1 {
-    width: 450px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+        width: 45rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
     .img2 {
         display: none;
     }
 }
- 
-@media only screen and (max-width:961px){ 
-    .collage {
-        display: none;
-    }
-    .about-container {
-        margin-top: 14rem;
-    }
+
+@media only screen and (max-width: 990px) {
+    .collage,
     .img1 {
         display: none;
     }
+
     .img2 {
-        max-width: 100%;
-        
+        width: 90%;
     }
+
     .text-box-1,
     .text-box-2 {
         padding: 2rem 5rem;
     }
+
     .text-box-3 {
-        padding: 0 10rem;
+        padding: 0 2rem;
     }
 }
-

@@ -5,17 +5,18 @@
     color: white;
     position: relative;
     width: 100%;
+    height: 100vh;
     margin-top: 5rem;
 }
 
 .collage {
     grid-column: 1 / span 1;
     grid-row: 1 / span 4;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .collage img {
-    width: 350px;
+    width: 35rem;
     height: 100%;
 }
 
@@ -25,22 +26,17 @@
 .text-box4 {
     display: flex;
     flex-direction: column;
-    width: 309px;
-    height: 194px;
-    background-color: #E4DAD324;
-    border-radius: 5px;
+    width: 30.9rem;
+    height: 19.4rem;
+    background-color: #e4dad324;
+    border-radius: 0.5rem;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
 }
-
-.text-box3 {
-    height: 240px;
-}
-
 
 .text-box1 i {
-    color: #A14405;
-    padding-right: 10px;
+    color: #a14405;
+    padding-right: 1rem;
 }
 
 .text-box2 p {
@@ -49,26 +45,33 @@
 
 .list li {
     display: list-item;
-    margin: 5px;
+    margin: 0.5rem;
+}
+
+.text-box3 {
+    height: 24rem;
 }
 
 .text-box3 label {
     display: none;
 }
 
-input, textarea {
-    background-color: #A14405;
-    padding: 5px 10px;
-    margin: 5px 0;
+input,
+textarea {
+    background-color: #a14405;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
     box-sizing: border-box;
-    font-family: 'raleway', sans-serif;
-    border-radius: 3px;
+    font-family: "raleway", sans-serif;
+    border-radius: 0.3rem;
     border: none;
 }
 
 textarea {
-    height: 85px;
+    height: 0.85rem;
     width: 92%;
+    height: 9rem;
     resize: none;
 }
 
@@ -77,12 +80,12 @@ input::placeholder {
     color: white;
 }
 
-#name, 
+#name,
 #email {
     width: 45%;
 }
 
-input[type=button] {
+input[type="button"] {
     color: white;
     cursor: pointer;
 }
@@ -93,56 +96,64 @@ input[type=button] {
 }
 
 .text-box4 i {
-    color: #A14405;
-    padding-right: 10px;
+    color: #a14405;
+    padding-right: 1rem;
 }
 
-@media only screen and (min-width:961px){
+@media only screen and (min-width: 961px) {
     .main-title {
         grid-column: 2 / span 1;
         grid-row: 1 / span 1;
         position: absolute;
         bottom: 0;
     }
+
     .text-box1 {
         grid-column: 2 / span 1;
         grid-row: 2 / span 1;
     }
+
     .text-box2 {
         grid-column: 3 / span 1;
         grid-row: 2 / span 1;
     }
+
     .text-box3 {
         grid-column: 2 / span 1;
         grid-row: 3 / span 1;
     }
+
     .text-box4 {
         grid-column: 3 / span 1;
         grid-row: 3 / span 1;
     }
+
     .text-box5 {
-        grid-column: 3 /span 1;
+        grid-column: 3 / span 1;
         grid-row: 4 / span 1;
     }
+
     .img1 {
-        width: 450px;
+        width: 45rem;
         position: absolute;
         right: 0;
         bottom: 0;
     }
+
     .img2 {
         display: none;
     }
 }
 
-@media only screen and (max-width:961px) and (min-width:746px) {
+@media only screen and (max-width: 961px) and (min-width: 746px) {
     .collage {
         display: none;
     }
+
     .contact-container {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 3fr 3fr 2fr; 
-        margin-top: 20rem;
+        grid-template-rows: 1fr 3fr 3fr 2fr;
+        margin-top: 7rem;
         align-content: center;
         justify-items: center;
         height: 100vh;
@@ -150,66 +161,75 @@ input[type=button] {
         padding: 0 2rem;
         overflow: unset;
     }
+
     .main-title {
         grid-column: 1 / span 2;
         grid-row: 1 / span 1;
         margin-bottom: 4rem;
     }
+
     .text-box1 {
         grid-column: 1 / span 1;
         grid-row: 2 / span 1;
     }
+
     .text-box2 {
         grid-column: 2 / span 1;
         grid-row: 2 / span 1;
     }
+
     .text-box3 {
         grid-column: 1 / span 1;
         grid-row: 3 / span 1;
     }
+
     .text-box4 {
         grid-column: 2 / span 1;
         grid-row: 3 / span 1;
     }
+
     .img1 {
-        width: 450px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+        width: 45rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
     }
+
     .img2 {
         display: none;
     }
 }
-    
-@media only screen and (max-width:745px){
+
+@media only screen and (max-width: 745px) {
     .collage {
         display: none;
     }
+
     .contact-container {
-        display:flex;
+        display: flex;
         flex-direction: column;
         gap: 2rem;
         align-items: center;
-        margin-top: 20rem;
+        margin-top: 8rem;
         overflow: unset;
         width: 100%;
         height: fit-content;
     }
+
     .text-box4 {
         order: 98;
     }
+
     .text-box3 {
         order: 99;
-        padding: 0 7rem;
         margin-bottom: 2rem;
     }
-    .socials2 {
-        display: none;
-    }
+
+    .socials2,
     .img1 {
         display: none;
     }
+
     .img2 {
         max-width: 100%;
         overflow: unset;
