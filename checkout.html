@@ -87,7 +87,10 @@
                                 name="saved payment"
                                 value="saved"
                             />
-                            <label for="saved payment">
+                            <label
+                                for="saved payment"
+                                aria-label="Use saved payment"
+                            >
                                 Use the payment information saved on your
                                 profile
                             </label>
@@ -99,11 +102,15 @@
                                 name="different payment"
                                 value="different"
                             />
-                            <label class="checkbox" for="new payment">
+                            <label
+                                class="checkbox"
+                                for="new payment"
+                                aria-label="Use different payment method"
+                            >
                                 Use a different payment method
                             </label>
                         </div>
-                        <a href="checkout_success.html"
+                        <a href="checkout_success.html" aria-label="Purchase"
                             ><input type="button" value="Purchase"
                         /></a>
                     </form>
