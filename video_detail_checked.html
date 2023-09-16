@@ -6,7 +6,7 @@
             name="description"
             content="This is the product page for Square Eyes where you will see product detals for movie x with a pdouct added to cart"
         />
-        <meta name="viewport" content="widt=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="css/styles.css" rel="stylesheet" />
         <link href="css/video_detail.css" rel="stylesheet" />
         <link
@@ -17,12 +17,18 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
             rel="stylesheet"
         />
+        <script defer src="js/video_detail_checked.js"></script>
     </head>
     <body>
         <header>
             <div class="hamburger-menu">
                 <input type="checkbox" id="menu-checkbox" />
-                <label aria-label="Hamburger menu" for="menu-checkbox" class="hamburger-icon"><i class="fa fa-bars" aria-hidden="true"></i></label>
+                <label
+                    aria-label="Hamburger menu"
+                    for="menu-checkbox"
+                    class="hamburger-icon"
+                    ><i class="fa fa-bars" aria-hidden="true"></i
+                ></label>
                 <nav>
                     <a href="index.html">Home</a>
                     <a href="videos.html">Videos</a>
@@ -39,7 +45,10 @@
             </div>
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="SquareEyes logo with an orange square/rectangle around the word square">
+                    <img
+                        src="images/logo.png"
+                        alt="SquareEyes logo with an orange square/rectangle around the word square"
+                    />
                 </a>
             </div>
             <div class="profile">
@@ -49,65 +58,21 @@
                 <a href="#" class="desktop" aria-label="heart icon">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </a>
-                <a class="shoppingcart-full" href="checkout.html" aria-label="shopping cart with item(s) icon">
+                <a
+                    class="shoppingcart-full"
+                    href="checkout.html"
+                    aria-label="shopping cart with item(s) icon"
+                >
                     <span class="count">1</span>
-                    <i class="fa fa-shopping-cart cart-icon" aria-hidden="true"></i>  
+                    <i
+                        class="fa fa-shopping-cart cart-icon"
+                        aria-hidden="true"
+                    ></i>
                 </a>
                 <a href="#" class="desktop">Log in</a>
             </div>
         </header>
-        <main class="video_detail-container">
-            <div class="image-info">
-                <img src="images/Elvis-detail.png" alt="Elvis: man with black hair in a white suite looking to the side. With a square light seethough background." />
-                <div class="row">
-                    <p>2022</p>
-                    <p><hr /></p>
-                    <p>12A</p>
-                    <p><hr /></p>
-                    <p>2h 39m</p>
-                </div>
-            </div>
-            <div class="synopsis">
-                <h1>Elvis</h1>
-                <p>
-                    Is about the life of American music icon Elvis Presley. We
-                    follow him from his childhood to becoming a movie and rock
-                    star in the 1950s. An important part of his journey is his
-                    complex relationship with his manager, Colonel Tom Parker.
-                </p>
-                <div class="dialog">$ 17.99</div>
-                <br>
-                <div class="heart-purchase">
-                    <a href="#" aria-label="orange heart icon/liked list">
-                        <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                    </a>
-                    <a class="clicked" href="video_detail_checked.html" aria-label="Added to cart">
-                        <input type="button" value="Added to cart"></a>
-                    </a>
-                </div>
-            </div>
-            <div class="extra-info">
-                <p>
-                    Genre: Biography, drama, music
-                </p>
-                <ul class="list">
-                    <li><a>Stars: </a></li>
-                    <li><a>Austin Butler</a></li>
-                    <li><a>Tom Hanks</a></li>
-                    <li><a>Olivia DeJonge</a></li>
-                </ul>
-                <p>
-                    Director: Baz Luhrmann
-                </p>
-            </div>
-            <div class="trailer">
-                <h2>Trailer</h2>
-                <div class="trailer1">
-                    <img src="images/Trailer.png" alt="Elvis: a dark haired man and woman looking as if they are about to kiss.">
-                    <img src="images/Play.png" class="img-top" alt="Elvis: a dark haired man and woman looking as if they are about to kiss with a play icon on top of the image.">
-                </div>
-            </div>
-        </main>
+        <main class="movieDetail"></main>
         <footer>
             <div class="footer-content">
                 <div class="socials">

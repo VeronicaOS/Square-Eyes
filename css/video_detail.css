@@ -1,4 +1,4 @@
-.video_detail-container {
+.movieDetail {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr;
@@ -14,6 +14,12 @@
     align-items: center;
 }
 
+.movieImage {
+    height: 400px;
+    width: 280px;
+    border-radius: 10px;
+}
+
 hr {
     border-color: #A14405;
     border-left: 0;
@@ -27,6 +33,12 @@ hr {
 
 h1 {
     margin-top: 0;
+}
+
+.synopsis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .synopsis p {
@@ -140,13 +152,13 @@ h1 {
     }
     
     @media only screen and (max-width:960px){
-    .video_detail-container {
+    .movieDetail {
         width: 95%;
         display: flex;
         flex-direction: column;
     }
 
-    .video_detial-container,
+    .movieDetail,
     .synopsis {
         display: flex;
         flex-direction: column;

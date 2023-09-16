@@ -23,8 +23,13 @@
     overflow: scroll;
 }
 
+.movie {
+    height: 200px;
+    width: 140px;
+}
+
 .video1,
-.video2 {
+.heartList {
     display: flex;
     gap: 1em;
 }
@@ -34,7 +39,7 @@
     align-items: center;
     grid-row: 5 / span 2;
     padding: 7rem 0;
-    justify-content: space-between;
+    justify-content: space-evenly
 }
 
 .spotlight img {
@@ -53,7 +58,7 @@
     grid-column: 2;
 }
 
-.video3 {
+.forYouList {
     display: flex;
     gap: 1em;
 }

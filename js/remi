@@ -1,0 +1,34 @@
+async function getMovies() {
+    let response = await fetch("https://api.noroff.dev/api/v1/square-eyes");
+    let data = await response.json();
+    return data;
+}
+
+getFilteredMovies(".newList", 0, 7);
+getFilteredMovies(".popularList", 5, 12);
+
+function getFilteredMovies(divName, start, end) {
+    const newMovies = Promise.resolve(getMovies()).then((movies) => {
+        var moviesDiv = document.querySelector(divName);
+        movies.slice(start, end).forEach(function (movie) {
+            var movieDiv = document.createElement("a");
+            movieDiv.href = "#";
+
+            // var titleElement = document.createElement('h2');
+            // titleElement.textContent = movie.title;
+
+            var imageElement = document.createElement("img");
+            imageElement.className = "movie";
+            imageElement.src = movie.image;
+            imageElement.alt = movie.title;
+
+            // var descriptionElement = document.createElement('p');
+            // descriptionElement.textContent = movie.description;
+
+            movieDiv.appendChild(imageElement);
+            // movieDiv.appendChild(titleElement);
+            // movieDiv.appendChild(descriptionElement);
+            moviesDiv.appendChild(movieDiv);
+        });
+    });
+}
