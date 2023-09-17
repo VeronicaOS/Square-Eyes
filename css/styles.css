@@ -22,11 +22,26 @@ header {
     z-index: 1;
 }
 
+.results {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
 .error {
-    border: 1px solid darkred;
+    font-size: x-large;
+    font-weight: 900;
+    border: 1px solid rgb(0, 0, 0);
     padding: 1rem;
-    color: darkred;
-    background: rgba(255, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
+    background: rgb(197, 83, 1);
+    height: fit-content;
+}
+
+.loading {
+    font-size: x-large;
+    font-weight: 900;
+    color: rgb(197, 83, 1);
 }
 
 /* Hamburger menu */
