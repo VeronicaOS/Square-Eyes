@@ -29,26 +29,25 @@ h1 {
     align-self: self-end;
 }
 
-hr {
-    border-color: #A14405;
-}
+.border {
+  border-bottom: 1px solid #A14405;  
+} 
 
 .elvis {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    position: relative;
+    flex-direction: column;
     margin: 2rem 0 2rem 2rem;
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .elvis img {
     width: 12rem;
-}
-
-.title {
-    position: absolute;
-    bottom: 0.2rem;
-    left: 13rem;
 }
 
 .subtotal {
@@ -66,8 +65,12 @@ hr {
     align-self: flex-end;
     width: 7.5rem;
 }
+
+.btn-remove {
+    width: 12rem;
+}
   
-input[type=button] {
+.btn , input[type=button] {
     background-color: #A14405;
     color: white;
     padding: 0.5rem 1rem;

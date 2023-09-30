@@ -18,7 +18,29 @@
             rel="stylesheet"
         />
         <script defer src="js/components/errors.js"></script>
+        <script defer src="js/components/store.js"></script>
         <script defer src="js/home.js"></script>
+        <!-- Hotjar Tracking Code for https://lighthearted-lebkuchen-895d9c.netlify.app -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 3675917, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(
+                window,
+                document,
+                "https://static.hotjar.com/c/hotjar-",
+                ".js?sv="
+            );
+        </script>
     </head>
     <body>
         <header>
@@ -60,8 +82,16 @@
                 <a href="#" class="desktop" aria-label="heart icon">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </a>
-                <a href="checkout_empty.html" aria-label="shopping cart icon">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <a
+                    class="cartAmount"
+                    href="checkout.html"
+                    aria-label="shopping cart with item(s) icon"
+                >
+                    <span class="count">0</span>
+                    <i
+                        class="fa fa-shopping-cart cart-icon"
+                        aria-hidden="true"
+                    ></i>
                 </a>
                 <a href="#" class="desktop"> Log in </a>
             </div>

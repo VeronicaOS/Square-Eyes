@@ -44,6 +44,32 @@ header {
     color: rgb(197, 83, 1);
 }
 
+.cartAmount {
+    position: relative;
+    width: 2.8rem;
+    height: 2.8rem;
+    height: auto;
+    overflow: hidden;
+}
+
+.count {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    z-index: 2;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background: #a14405;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    display: block;
+    text-align: center;
+    color: white;
+    font-family: "raleway", sans-serif;
+    font-weight: bold;
+}
+
 /* Hamburger menu */
 
 .hamburger-menu {
@@ -83,6 +109,7 @@ header {
 
 .profile {
     padding: 0.7rem;
+    display: flex;
 }
 
 .profile a {

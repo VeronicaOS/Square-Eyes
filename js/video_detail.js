@@ -39,7 +39,7 @@ async function getMovieDetail() {
                         <a href="#" aria-label="orange heart icon/liked list">
                             <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
                         </a>
-                        <a class="button" href="video_detail_checked.html" aria-label="Add to cart">
+                        <a class="cart-btn" href="video_detail_checked.html" aria-label="Add to cart">
                             <input type="button" value="Add to cart"></a>
                         </a>
                     </div>

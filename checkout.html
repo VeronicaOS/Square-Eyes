@@ -17,6 +17,28 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
             rel="stylesheet"
         />
+        <script defer src="js/components/store.js"></script>
+        <!-- Hotjar Tracking Code for https://lighthearted-lebkuchen-895d9c.netlify.app -->
+        <script>
+            (function (h, o, t, j, a, r) {
+                h.hj =
+                    h.hj ||
+                    function () {
+                        (h.hj.q = h.hj.q || []).push(arguments);
+                    };
+                h._hjSettings = { hjid: 3675917, hjsv: 6 };
+                a = o.getElementsByTagName("head")[0];
+                r = o.createElement("script");
+                r.async = 1;
+                r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(
+                window,
+                document,
+                "https://static.hotjar.com/c/hotjar-",
+                ".js?sv="
+            );
+        </script>
     </head>
     <body>
         <header>
@@ -68,16 +90,23 @@
                 <div class="dialog-content">
                     <h1>Shopping cart</h1>
                     <p class="price">Price</p>
-                    <hr />
-                    <div class="elvis">
-                        <img
-                            src="images/Popular/Elvis.png"
-                            alt="Elvis: man with black hair in a white suite looking to the side."
-                        />
-                        <p class="title">Elvis</p>
-                        <p class="price1">$ 17.99</p>
+                    <div class="border"></div>
+                    <div>
+                        <div class="elvis">
+                            <img
+                                src="images/Popular/Elvis.png"
+                                alt="Elvis: man with black hair in a white suite looking to the side."
+                            />
+                            <div class="movie-info">
+                                <button type="button" class="btn btn-remove">
+                                    REMOVE
+                                </button>
+                                <p class="title">Elvis</p>
+                                <p class="price1">$ 17.99</p>
+                            </div>
+                        </div>
+                        <div class="border"></div>
                     </div>
-                    <hr />
                     <div class="subtotal"><p>Subtotal (1 item) $ 17.99</p></div>
                     <form class="checkout-form">
                         <div>
