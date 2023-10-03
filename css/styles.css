@@ -166,6 +166,17 @@ hr {
     transition: transform 0.2s ease-in-out;
 }
 
+.scroll {
+    overflow: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    overflow-y: scroll; 
+}
+  
+.scroll::-webkit-scrollbar {
+    display: none; 
+  }
+
 @media only screen and (min-width: 961px) {
     .hamburger-icon,
     .mobile {

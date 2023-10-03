@@ -19,19 +19,30 @@
     width: 90%;
 }
 
-.grid-container div {
-    overflow: scroll;
-}
-
 .movie {
     height: 200px;
     width: 140px;
 }
 
 .video1,
-.heartList {
+.heartList,
+.forYouList {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
+}
+
+.heartList-titles,
+.forYou-titles {
+    display: flex;
+    max-height: fit-content;
+    gap: 10px;
+    width: fit-content;
+}
+
+.title {
+    width: 140px;
+    padding: 10px;
+    text-align: center;
 }
 
 .spotlight {
@@ -56,11 +67,6 @@
 .avatar {
     display: grid;
     grid-column: 2;
-}
-
-.forYouList {
-    display: flex;
-    gap: 1em;
 }
 
 @media only screen and (max-width:961px) and (min-width:746px){   

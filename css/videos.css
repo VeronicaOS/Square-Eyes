@@ -8,18 +8,37 @@
     padding-left: 2%;
 }
 
-.videos-container div {
+/* .videos-container {
     display: flex;
     overflow: scroll;
     overflow-y: hidden;
     flex-wrap: nowrap;
     gap: 1em;
+} */
+
+.videos-container {
+    display: flex;
 }
 
 .popularList,
 .newList {
     height: 230px;
     padding: 15px;
+}
+
+.grow {
+    display: flex;
+}
+
+.rating-titles,
+.action-titles,
+.new-titles,
+.top-titles {
+    display: flex;
+    max-height: fit-content;
+    gap: 10px;
+    width: max-content
+
 }
 
 .movie {
@@ -36,6 +55,12 @@ h2 {
     height: 10rem;
     width: 10rem;
     padding-top: 5rem;
+}
+
+.title {
+    width: 140px;
+    padding: 10px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 960px) {

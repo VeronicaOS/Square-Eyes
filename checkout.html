@@ -17,7 +17,9 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
             rel="stylesheet"
         />
+        <script defer src="js/components/errors.js"></script>
         <script defer src="js/components/store.js"></script>
+        <script defer src="js/video_detail.js"></script>
         <!-- Hotjar Tracking Code for https://lighthearted-lebkuchen-895d9c.netlify.app -->
         <script>
             (function (h, o, t, j, a, r) {
@@ -91,23 +93,8 @@
                     <h1>Shopping cart</h1>
                     <p class="price">Price</p>
                     <div class="border"></div>
-                    <div>
-                        <div class="elvis">
-                            <img
-                                src="images/Popular/Elvis.png"
-                                alt="Elvis: man with black hair in a white suite looking to the side."
-                            />
-                            <div class="movie-info">
-                                <button type="button" class="btn btn-remove">
-                                    REMOVE
-                                </button>
-                                <p class="title">Elvis</p>
-                                <p class="price1">$ 17.99</p>
-                            </div>
-                        </div>
-                        <div class="border"></div>
-                    </div>
-                    <div class="subtotal"><p>Subtotal (1 item) $ 17.99</p></div>
+                    <div class="cart-items"></div>
+                    <div class="subtotal">Subtotal (0 items) NOK</div>
                     <form class="checkout-form">
                         <div>
                             <input
