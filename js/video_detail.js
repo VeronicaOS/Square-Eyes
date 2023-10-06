@@ -1,9 +1,6 @@
 const movieDetail = document.querySelector(".movieDetail");
 const resultsContainer = document.querySelector(".results");
 const loading = document.querySelector(".loading");
-const cartCount = document.querySelector(".count");
-const cartItems = document.querySelector(".cart-items");
-const subtotal = document.querySelector(".subtotal");
 
 let isLoading = true;
 
@@ -21,16 +18,14 @@ async function getMovies() {
     }
 }
 
-// const movies = await getMovies();
-// const movie = movies.filter((movie) => movie.id === movieId)[0];
-
 async function getMovieDetail() {
     const movies = await getMovies();
+    console.log(movies);
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const movieId = urlParams.get("id");
     const movie = movies.filter((movie) => movie.id === movieId)[0];
-    console.log(movie);
+    // console.log(movie);
     if (isLoading) loading.innerHTML = "LOADING MOVIES...";
     else {
         movieDetail.innerHTML = `<div class="image-info">
@@ -83,6 +78,42 @@ async function getMovieDetail() {
 }
 getMovieDetail();
 
+// function save (key, value) {
+//     const encodedValue = JSON.stringify(value);
+//     localStorage.setItem(key, encodedValue);
+// }
+
+// function load (key) {
+//     const encodedValue = localStorage.getItem(key);
+//     return JSON.parse(encodedValue);
+// }
+
+// function remove (key) {
+//     localStorage.removeItem(key);
+// }
+
+// function addToCart (event) {
+//     const button = event.target;
+//     const id = button.dataset.id;
+
+//     let cart = load("cart") || [];
+//     cart.push(id);
+
+//     save("cart", cart);
+// }
+
+// function renderCart () {}
+
+// function cartButton () {
+//     const buttons = document.querySelectorAll("cart-btn")
+
+//     buttons.forEach(button => {
+//         button.addEventListener("click", addToCart)
+//     })
+// console.log(buttons)
+// }
+// cartButton()
+
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
@@ -90,63 +121,23 @@ async function addToCart(id) {
     const movies = await getMovies();
     console.log(id);
     if (cart.some((item) => item.id === id)) {
-        alert("Product already in cart"); //hvorfor fungerer ikke dette?
+        alert("Product already in cart");
     } else {
         const movie = movies.find((movie) => movie.id === id);
 
         cart.push({
             ...movie,
-            numberOfMovies : 1
+            numberOfMovies: 1,
         });
+        console.log(cart);
     }
 
     updateCart();
 }
 
 function updateCart() {
-    renderSubtotal();
-    renderCartItems();
-
     localStorage.setItem("CART", JSON.stringify(cart));
+    cartCount.innerHTML = cart.length;
     console.log(cart);
 }
 updateCart();
-
-function renderSubtotal() {
-    let totalPrice = 0,
-        totalItems = 0;
-
-    cart.forEach((movie) => {
-        totalPrice += movie.price * movie.numberOfMovies;
-        totalItems += movie.numberOfMovies;
-    });
-
-    subtotal.innerHTML = `Subtotal (${totalItems} items): NOK ${totalPrice}`;
-    // totalItemsInCartEl.innerHTML = totalItems;
-}
-renderSubtotal();
-
-function renderCartItems() {
-    cartItems.innerHTML = ""; // clear cart element
-    cart.forEach((movie) => {
-        cartItems.innerHTML += `
-      <div class="cart-movie">
-      <img
-          src=${movie.image}
-          alt=""
-      />
-      <div class="movie-info">
-          <button type="button" class="btn btn-remove">
-              REMOVE
-          </button>
-          <p class="title">${movie.title}</p>
-          <p class="price1">NOK ${movie.price}</p> 
-      </div>
-      </div>
-      <div class="border"></div>
-        `;
-    });
-}
-renderCartItems();
-
-// HUSK Å FINNE EN MÅTE Å KORTE FILM TITLENE PÅ

@@ -20,10 +20,12 @@
     display: flex;
 }
 
-.popularList,
-.newList {
+.ratingList, 
+.actionList,
+.newList,
+.topList {
     height: 230px;
-    padding: 15px;
+    gap: 10px;
 }
 
 .grow {
@@ -37,8 +39,7 @@
     display: flex;
     max-height: fit-content;
     gap: 10px;
-    width: max-content
-
+    width: max-content;
 }
 
 .movie {
@@ -53,14 +54,19 @@ h2 {
 
 #nmbr {
     height: 10rem;
-    width: 10rem;
+    width: 5rem;
     padding-top: 5rem;
 }
 
 .title {
     width: 140px;
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
+}
+
+.top-titles {
+    padding-left: 50px;
+    gap: 65px;
 }
 
 @media only screen and (max-width: 960px) {

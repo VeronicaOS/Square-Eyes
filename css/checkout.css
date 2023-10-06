@@ -10,7 +10,7 @@
 
 .dialog {
     width: 50%;
-    background-color: #E4DAD324;
+    background-color: #e4dad324;
     border-radius: 0.5rem;
     box-sizing: border-box;
     padding: 1rem 4rem;
@@ -30,13 +30,14 @@ h1 {
 }
 
 .border {
-  border-bottom: 1px solid #A14405;  
-} 
+    border-bottom: 1px solid #a14405;
+}
 
 .cart-movie {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 2rem 0 2rem 2rem;
+    align-items: flex-end;
 }
 
 .movie-info {
@@ -44,6 +45,9 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 0 16px;
 }
 
 .cart-movie img {
@@ -69,13 +73,14 @@ h1 {
 .btn-remove {
     width: 12rem;
 }
-  
-.btn , input[type=button] {
-    background-color: #A14405;
+
+.btn,
+input[type="button"] {
+    background-color: #a14405;
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.5rem 0;
-    font-family: 'raleway', sans-serif;
+    font-family: "raleway", sans-serif;
     border-radius: 0.3rem;
     border: none;
     cursor: pointer;
@@ -92,8 +97,14 @@ h2 {
     text-align: center;
     margin-top: 16rem;
 }
-   
-@media only screen and (max-width:960px){
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 960px) {
     .dialog {
         width: 90%;
     }
