@@ -1,13 +1,16 @@
 html {
     font-size: 62.5%;
+    color: black;
 }
 
 body {
-    margin: 0;
     background-image: linear-gradient(to right, #a14405, black 40%);
     font-family: "Raleway", sans-serif;
     font-size: 1.6rem;
     background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 header {
@@ -18,8 +21,9 @@ header {
     background-color: #29150b;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1;
+    max-width: 1440px;
 }
 
 .results {
@@ -81,6 +85,7 @@ header {
     background-color: #29150b;
     box-sizing: border-box;
     padding: 2rem 4rem 2rem 2rem;
+    top: 36px;
 }
 
 .hamburger-menu nav,

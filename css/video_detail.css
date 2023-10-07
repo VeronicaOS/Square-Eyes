@@ -196,6 +196,10 @@ h1 {
     }
 
     .trailer1 img {
-        width: 60%;
+        width: 250px;
+    }
+
+    .synopsis-title {
+        text-align: center;
     }
 }
