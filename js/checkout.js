@@ -9,15 +9,12 @@ function updateCart() {
     renderSubtotal();
 
     localStorage.setItem("CART", JSON.stringify(cart));
-    console.log(cart);
 }
 updateCart();
 
 function renderCartItems() {
-    console.log(cart);
-    cartItems.innerHTML = ""; // clear cart element
+    cartItems.innerHTML = "";
     cart.forEach((movie) => {
-        console.log(movie);
         cartItems.innerHTML += `
       <div class="cart-movie">
       <div class="movie">
@@ -31,7 +28,7 @@ function renderCartItems() {
       </div>
       <div class="movie-info">
           <p class="title">${movie.title}</p>
-          <p class="price1">NOK ${movie.price}</p> 
+          <p class="price1">${movie.price} kr</p> 
       </div>
       </div>
       <div class="border"></div>
@@ -52,12 +49,12 @@ function renderSubtotal() {
         totalItems = 0;
 
     cart.forEach((movie) => {
-        totalPrice += movie.price * cart.length;
-        totalItems += cart.length;
+        totalPrice += movie.price;
+        totalItems = cart.length;
     });
 
-    subtotal.innerHTML = `Subtotal (${totalItems} items): NOK ${totalPrice.toFixed(
+    subtotal.innerHTML = `Subtotal (${totalItems} items): ${totalPrice.toFixed(
         2
-    )}`;
+    )} kr`;
 }
-renderSubtotal();
+// renderSubtotal();

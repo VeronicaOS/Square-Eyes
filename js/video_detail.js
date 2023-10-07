@@ -18,14 +18,16 @@ async function getMovies() {
     }
 }
 
+let hearts = JSON.parse(localStorage.getItem("HEARTS")) || [];
+updateHearts();
+
 async function getMovieDetail() {
     const movies = await getMovies();
-    console.log(movies);
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const movieId = urlParams.get("id");
     const movie = movies.filter((movie) => movie.id === movieId)[0];
-    // console.log(movie);
+
     if (isLoading) loading.innerHTML = "LOADING MOVIES...";
     else {
         movieDetail.innerHTML = `<div class="image-info">
@@ -41,13 +43,11 @@ async function getMovieDetail() {
                 <div class="synopsis">
                     <h1 class="synopsis-title">${movie.title}</h1>
                     <p>${movie.description}</p>
-                    <div class="price">NOK ${movie.price}</div>
+                    <div class="price">${movie.price} kr</div>
                     <div class="heart-purchase">
-                        <a href="#" aria-label="orange heart icon/liked list">
-                            <i class="fa fa-heart-o fa-lg" aria-hidden="true"></i>
-                        </a>
+                        <a class="heart-btn" onclick="addToHearts('${movie.id}')" aria-label="Add to heart list"/>
                         <a class="cart-btn" onclick="addToCart('${movie.id}')"  aria-label="Add to cart">
-                            <input type="button" value="Add to cart"></a>
+                            <input type="button" value="Add to cart"/>
                         </a>
                     </div>
                 </div>
@@ -74,52 +74,27 @@ async function getMovieDetail() {
                 </div>
             </div>
             `;
+        renderHeart(movieId);
     }
 }
 getMovieDetail();
 
-// function save (key, value) {
-//     const encodedValue = JSON.stringify(value);
-//     localStorage.setItem(key, encodedValue);
-// }
+function renderHeart(id) {
+    const heartBtn = document.querySelector(".heart-btn");
+    heartBtn.innerHTML = "";
 
-// function load (key) {
-//     const encodedValue = localStorage.getItem(key);
-//     return JSON.parse(encodedValue);
-// }
-
-// function remove (key) {
-//     localStorage.removeItem(key);
-// }
-
-// function addToCart (event) {
-//     const button = event.target;
-//     const id = button.dataset.id;
-
-//     let cart = load("cart") || [];
-//     cart.push(id);
-
-//     save("cart", cart);
-// }
-
-// function renderCart () {}
-
-// function cartButton () {
-//     const buttons = document.querySelectorAll("cart-btn")
-
-//     buttons.forEach(button => {
-//         button.addEventListener("click", addToCart)
-//     })
-// console.log(buttons)
-// }
-// cartButton()
+    if (hearts.some((movie) => movie.id === id)) {
+        heartBtn.innerHTML = '<i class="fa fa-heart fa-lg"/>';
+    } else {
+        heartBtn.innerHTML = '<i class="fa fa-heart-o fa-lg"/>';
+    }
+}
 
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
 async function addToCart(id) {
     const movies = await getMovies();
-    console.log(id);
     if (cart.some((item) => item.id === id)) {
         alert("Product already in cart");
     } else {
@@ -127,9 +102,7 @@ async function addToCart(id) {
 
         cart.push({
             ...movie,
-            numberOfMovies: 1,
         });
-        console.log(cart);
     }
 
     updateCart();
@@ -138,6 +111,23 @@ async function addToCart(id) {
 function updateCart() {
     localStorage.setItem("CART", JSON.stringify(cart));
     cartCount.innerHTML = cart.length;
-    console.log(cart);
 }
-updateCart();
+
+function updateHearts() {
+    localStorage.setItem("HEARTS", JSON.stringify(hearts));
+}
+
+async function addToHearts(id) {
+    const movies = await getMovies();
+    if (hearts.some((movie) => movie.id === id)) {
+        hearts = hearts.filter((movie) => movie.id !== id);
+    } else {
+        const movie = movies.find((movie) => movie.id === id);
+
+        hearts.push({
+            ...movie,
+        });
+    }
+    updateHearts();
+    renderHeart(id);
+}

@@ -17,6 +17,7 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap"
             rel="stylesheet"
         />
+        <script defer src="js/components/store.js"></script>
         <!-- Hotjar Tracking Code for https://lighthearted-lebkuchen-895d9c.netlify.app -->
         <script>
             (function(h,o,t,j,a,r){
@@ -68,8 +69,16 @@
                 <a href="#" class="desktop" aria-label="heart icon">
                     <i class="fa fa-heart" aria-hidden="true"></i>
                 </a>
-                <a href="checkout_empty.html" aria-label="shopping cart icon">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <a
+                    class="cartAmount"
+                    href="checkout.html"
+                    aria-label="shopping cart with item(s) icon"
+                >
+                    <span class="count"></span>
+                    <i
+                        class="fa fa-shopping-cart cart-icon"
+                        aria-hidden="true"
+                    ></i>
                 </a>
                 <a href="#" class="desktop"> Log in </a>
             </div>

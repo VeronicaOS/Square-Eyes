@@ -63,6 +63,7 @@ h1 {
     color: #a14405;
 }
 
+
 .clicked input,
 .cart-btn input {
     background-color: #a14405;
@@ -122,6 +123,10 @@ h1 {
 .trailer1:hover .img-top {
     display: inline;
     position: absolute;
+}
+
+.fa-regular {
+    color: #a14405;
 }
 
 /* shopping cart will change when add to cart is clicked */
