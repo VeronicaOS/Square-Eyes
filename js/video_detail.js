@@ -68,8 +68,7 @@ async function getMovieDetail() {
                 <div class="trailer">
                     <h2>Trailer</h2>
                     <div class="trailer1">
-                        <img src=${movie.image} alt="Elvis: a dark haired man and woman looking as if they are about to kiss.">
-                        <img src="images/Play.png" class="img-top" alt="Elvis: a dark haired man and woman looking as if they are about to kiss with a play icon on top of the image.">
+                        <img src="images/Play.png" alt="Elvis: a dark haired man and woman looking as if they are about to kiss.">
                     </div>
                 </div>
             </div>
