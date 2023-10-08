@@ -76,7 +76,9 @@ h1 {
     cursor: pointer;
 }
 
-.clicked input {
+.cart-btn input:active,
+.cart-btn input:focus,
+.cart-btn input:after {
     background-color: white;
     color: #a14405;
 }

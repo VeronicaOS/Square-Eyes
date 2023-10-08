@@ -106,6 +106,7 @@ async function addToCart(id) {
     }
 
     updateCart();
+
 }
 
 function updateCart() {

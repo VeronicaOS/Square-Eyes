@@ -57,4 +57,4 @@ function renderSubtotal() {
         2
     )} kr`;
 }
-// renderSubtotal();
+
