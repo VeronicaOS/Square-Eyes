@@ -6,9 +6,10 @@ let isLoading = true;
 
 async function getMovies() {
     try {
-        const response = await fetch(
-            "https://api.noroff.dev/api/v1/square-eyes"
-        );
+        const noroffUrl = "https://noroffcors.onrender.com/";
+        const moviesUrl = "squareeyes.veronicaos.com/wp-json/wc/store/products";
+        const url = noroffUrl + moviesUrl;
+        const response = await fetch(url);
         return await response.json().then((response) => {
             if (response) isLoading = false;
             return response;
@@ -26,14 +27,19 @@ async function getMovieDetail() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const movieId = urlParams.get("id");
-    const movie = movies.filter((movie) => movie.id === movieId)[0];
-
+    const movie = movies.find((movie) => Number(movie.id) == movieId);
+    let movieGenres = "";
+    movie.categories.map((category) => {
+        movieGenres += category.name + " ";
+    });
     if (isLoading) loading.innerHTML = "LOADING MOVIES...";
     else {
         movieDetail.innerHTML = `<div class="image-info">
-                    <img class="movieImage" src=${movie.image} alt="" />
+                    <img class="movieImage" src="${
+                        movie.images[0].src
+                    }" alt="" />
                     <div class="row">
-                        <p>${movie.released}</p>
+                        <p>${movie.tags[0].name}</p>
                         <p><hr /></p>
                         <p>12A</p>
                         <p><hr /></p>
@@ -41,19 +47,25 @@ async function getMovieDetail() {
                     </div>
                 </div>
                 <div class="synopsis">
-                    <h1 class="synopsis-title">${movie.title}</h1>
+                    <h1 class="synopsis-title">${movie.name}</h1>
                     <p>${movie.description}</p>
-                    <div class="price">${movie.price} kr</div>
+                    <div class="price">${Number(
+                        movie.prices.price / 100
+                    )} kr</div>
                     <div class="heart-purchase">
-                        <a class="heart-btn" onclick="addToHearts('${movie.id}')" aria-label="Add to heart list"/>
-                        <a class="cart-btn" onclick="addToCart('${movie.id}')"  aria-label="Add to cart">
+                        <a class="heart-btn" onclick="addToHearts('${
+                            movie.id
+                        }')" aria-label="Add to heart list"/>
+                        <a class="cart-btn" onclick="addToCart('${
+                            movie.id
+                        }')"  aria-label="Add to cart">
                             <input type="button" value="Add to cart"/>
                         </a>
                     </div>
                 </div>
                 <div class="extra-info">
                     <p>
-                        Genre: ${movie.genre}
+                        Genre: ${movieGenres}
                     </p>
                     <ul class="list">
                         <li><a>Stars: </a></li>
@@ -105,7 +117,6 @@ async function addToCart(id) {
     }
 
     updateCart();
-
 }
 
 function updateCart() {

@@ -19,9 +19,10 @@ function shuffleMovies(movies) {
 
 async function fetchMovies() {
     try {
-        const response = await fetch(
-            "https://api.noroff.dev/api/v1/square-eyes"
-        );
+        const noroffUrl = "https://noroffcors.onrender.com/";
+        const moviesUrl = "squareeyes.veronicaos.com/wp-json/wc/store/products";
+        const url = noroffUrl + moviesUrl;
+        const response = await fetch(url);
         const movies = await response.json().then((response) => {
             if (response) {
                 isLoading = false;
@@ -31,23 +32,32 @@ async function fetchMovies() {
 
         if (isLoading) loading.innerHTML = "LOADING MOVIES...";
         else {
-            movies
-                .filter(
-                    (movie) =>
-                        movie.genre === "Comedy" ||
-                        movie.genre === "Kids" ||
-                        movie.genre === "Horror"
-                )
-                .forEach((movie) => {
-                    heartList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.image}"/></a>`;
-                    heartListTitles.innerHTML += `<div class="title">${movie.title}</div>`;
-                });
+            movies;
+            let filteredMovies = [];
+            movies.map((movie) =>
+                movie.categories.map((category) => {
+                    if (
+                        category.name === "Comedy" ||
+                        category.name === "Fantasy" ||
+                        category.name === "Biography"
+                    ) {
+                        if (filteredMovies.includes(movie)) {
+                        } else {
+                            filteredMovies.push(movie);
+                        }
+                    }
+                })
+            );
+            filteredMovies.forEach((movie) => {
+                heartList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                heartListTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+            });
 
             const shuffledMovies = shuffleMovies(movies);
 
             shuffledMovies.slice(0, 7).forEach((movie) => {
-                forYou.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.image}"/></a>`;
-                forYouTitles.innerHTML += `<div class="title">${movie.title}</div>`;
+                forYou.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                forYouTitles.innerHTML += `<div class="title">${movie.name}</div>`;
             });
         }
     } catch (error) {

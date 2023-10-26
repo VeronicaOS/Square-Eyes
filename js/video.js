@@ -13,9 +13,10 @@ let isLoading = true;
 
 async function fetchMovies() {
     try {
-        const response = await fetch(
-            "https://api.noroff.dev/api/v1/square-eyes"
-        );
+        const noroffUrl = "https://noroffcors.onrender.com/";
+        const moviesUrl = "squareeyes.veronicaos.com/wp-json/wc/store/products";
+        const url = noroffUrl + moviesUrl;
+        const response = await fetch(url);
         const movies = await response.json().then((response) => {
             if (response) {
                 isLoading = false;
@@ -26,50 +27,90 @@ async function fetchMovies() {
         if (isLoading) loading.innerHTML = "LOADING MOVIES...";
         else {
             movies
-                .sort((a, b) => Number(b.rating) - Number(a.rating))
-                .forEach((movie) => {
-                    ratingList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.image}"/></a>`;
-                    ratingTitles.innerHTML += `<div class="title">${movie.title}</div>`;
-                });
-
-            movies
-                .filter((movie) => movie.genre === "Action")
-                .forEach((movie) => {
-                    actionList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.image}"/></a>`;
-                    actionTitles.innerHTML += `<div class="title">${movie.title}</div>`;
-                });
-
-            movies
-                .sort((a, b) => Number(b.released) - Number(a.released))
-                .forEach((movie) => {
-                    newList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.image}"/></a>`;
-                    newTitles.innerHTML += `<div class="title">${movie.title}</div>`;
-                });
-
-            movies
-                .filter(
-                    (movie) =>
-                        movie.genre === "Comedy" ||
-                        movie.genre === "Drama" ||
-                        movie.genre === "Horror"
+                .sort(
+                    (a, b) =>
+                        Number(b.attributes[0].terms[0].name) -
+                        Number(a.attributes[0].terms[0].name)
                 )
-                .forEach((movie, index) => {
-                    topList.innerHTML += `<img
-                                        id="nmbr"
-                                        src="images/Top 5/${index + 1}.png"
-                                        alt="The number ${
-                                            index + 1
-                                        } in bold orange"/> 
-                                        <a href="video_detail.html?id=${
-                                            movie.id
-                                        }"><img class="movie" src="${
-                        movie.image
-                    }"/></a>`;
-                    topTitles.innerHTML += `<div class="title">${movie.title}</div>`;
+                .forEach((movie) => {
+                    ratingList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                    ratingTitles.innerHTML += `<div class="title">${movie.name}</div>`;
                 });
+
+            // if (isLoading) loading.innerHTML = "LOADING MOVIES...";
+            // else
+            // const sortedMovies = movies
+            //     .sort((a, b) => {
+            //         const aName = Number(a.attributes[0].terms[0].name);
+            //         const bName = Number(b.attributes[0].terms[0].name);
+
+            //         if (aName > bName) {
+            //             return 1;
+            //         } else if (bName > aName) {
+            //             return -1;
+            //         } else return 0;
+            //     })
+            //     .forEach((movie) => {
+            //         console.log(movie);
+            //         ratingList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+            //         ratingTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+            //     });
+
+            // console.log(sortedMovies);
+
+            movies
+                .filter((movie) => movie.categories[0].name === "Action")
+                .forEach((movie) => {
+                    actionList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                    actionTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+                });
+
+            // movies
+            //     .sort(
+            //         (a, b) => Number(b.tags[0].names) - Number(a.tags[0].names)
+            //     )
+            //     .forEach((movie) => {
+            //         newList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+            //         newTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+            //     });
+
+            movies.reverse().forEach((movie) => {
+                newList.innerHTML += `<a href="video_detail.html?id=${movie.id}"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                newTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+            });
+
+            let filteredMovies = [];
+            movies.map((movie) =>
+                movie.categories.map((category) => {
+                    if (
+                        category.name === "Action" ||
+                        category.name === "Drama" ||
+                        category.name === "Horror"
+                    ) {
+                        if (filteredMovies.includes(movie)) {
+                        } else {
+                            if (filteredMovies.length < 5) {
+                                filteredMovies.push(movie);
+                            }
+                        }
+                    }
+                })
+            );
+
+            filteredMovies.forEach((movie, index) => {
+                topList.innerHTML += `<img
+                    id="nmbr"
+                    src="images/Top 5/${index + 1}.png"
+                    alt="The number ${index + 1} in bold orange"/>
+                    <a href="video_detail.html?id=${
+                        movie.id
+                    }"><img class="movie" src="${movie.images[0].src}"/></a>`;
+                topTitles.innerHTML += `<div class="title">${movie.name}</div>`;
+            });
         }
     } catch (error) {
         resultsContainer.innerHTML = displayError("AN ERROR OCCURED");
     }
 }
+
 fetchMovies();
