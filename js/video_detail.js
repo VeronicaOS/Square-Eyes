@@ -106,10 +106,10 @@ updateCart();
 
 async function addToCart(id) {
     const movies = await getMovies();
-    if (cart.some((item) => item.id === id)) {
+    if (cart.some((item) => item.id == id)) {
         alert("Product already in cart");
     } else {
-        const movie = movies.find((movie) => movie.id === id);
+        const movie = movies.find((movie) => movie.id == id);
 
         cart.push({
             ...movie,
@@ -130,10 +130,10 @@ function updateHearts() {
 
 async function addToHearts(id) {
     const movies = await getMovies();
-    if (hearts.some((movie) => movie.id === id)) {
-        hearts = hearts.filter((movie) => movie.id !== id);
+    if (hearts.some((movie) => movie.id == id)) {
+        hearts = hearts.filter((movie) => movie.id != id);
     } else {
-        const movie = movies.find((movie) => movie.id === id);
+        const movie = movies.find((movie) => movie.id == id);
 
         hearts.push({
             ...movie,
