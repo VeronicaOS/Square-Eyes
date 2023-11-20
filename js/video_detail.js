@@ -4,10 +4,15 @@ const loading = document.querySelector(".loading");
 
 let isLoading = true;
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const movieId = urlParams.get("id");
+
 async function getMovies() {
     try {
         const noroffUrl = "https://noroffcors.onrender.com/";
-        const moviesUrl = "squareeyes.veronicaos.com/wp-json/wc/store/products";
+        const moviesUrl =
+            "squareeyes.veronicaos.com/wp-json/wc/store/products/" + movieId;
         const url = noroffUrl + moviesUrl;
         const response = await fetch(url);
         return await response.json().then((response) => {
@@ -23,11 +28,8 @@ let hearts = JSON.parse(localStorage.getItem("HEARTS")) || [];
 updateHearts();
 
 async function getMovieDetail() {
-    const movies = await getMovies();
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const movieId = urlParams.get("id");
-    const movie = movies.find((movie) => Number(movie.id) == movieId);
+    const movie = await getMovies();
+
     let movieGenres = "";
     movie.categories.map((category) => {
         movieGenres += category.name + " ";
@@ -105,12 +107,10 @@ let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
 
 async function addToCart(id) {
-    const movies = await getMovies();
+    const movie = await getMovies();
     if (cart.some((item) => item.id == id)) {
         alert("Product already in cart");
     } else {
-        const movie = movies.find((movie) => movie.id == id);
-
         cart.push({
             ...movie,
         });
@@ -129,12 +129,10 @@ function updateHearts() {
 }
 
 async function addToHearts(id) {
-    const movies = await getMovies();
+    const movie = await getMovies();
     if (hearts.some((movie) => movie.id == id)) {
         hearts = hearts.filter((movie) => movie.id != id);
     } else {
-        const movie = movies.find((movie) => movie.id == id);
-
         hearts.push({
             ...movie,
         });
