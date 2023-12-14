@@ -48,18 +48,12 @@ You can list a the tech stack that you've used over here
 git clone git@github.com:VeronicaOS/Square-Eyes.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install
-```
-
 ### Running
 
 To run the app, run the following commands:
 
 ```bash
-npm run start
+Run Live Server on VS Code
 ```
 
 ## Contributing
@@ -67,8 +61,6 @@ npm run start
 Here you can detail any information you want to provide regarding contributing to the project. For big projects you will usually have a separate `CONTRIBUTING.md` and link to it, but for smaller projects you can simply include instructions here. These instructions can simply detail the process you want a person to take, such as to make sure to open a pull request so code can be reviewed.
 
 ## Contact
-
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
 
 [My Twitter page](www.twitter.com)
 
