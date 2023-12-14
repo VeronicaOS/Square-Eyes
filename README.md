@@ -1,34 +1,46 @@
 # Square Eyes
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+<img width="1079" alt="Screenshot 2023-12-14 at 15 29 45" src="https://github.com/VeronicaOS/Square-Eyes/assets/126082037/aadea387-f091-4c6c-834c-5ecf2f466766">
 
-For this project I had to make a webpage for the fictional company Square Eyes - a website where you can buy and then stream movies. 
-We were assigned to use html, css, javascript and then use an API to exstract information from wordpress.
+
+For this project I had to make a webpage for the fictional company Square Eyes - a website where you can buy and then stream those movies.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This was my very first project at Noroff. The project started as a design project where we only used Figma. Later we were tasked to build it as a website with HTML and CSS, and at a later date we added JavaScript and Wordpress as a headless CMS as well. 
 
-You can add some bullet points if you'd like to:
+## Brief
 
-- List item 1
-- List item 2
-- List item 3
+A video streaming website where you can purchase high-quality videos directly from the people who make them. The users of this website want to purchase videos right away, which will allow them to watch it online.
+
+### Target audience
+Aged 25 to 40 and are interested in cinema. They enjoy watching interesting and high-quality films.
+
+### Unique selling points
+Content watchers: Supporting small filmmakers and discovering interesting films.
+
+### Site architecture
+- Home
+- List of Videos
+- A video page showing the product details (product details such as the description of the product, price and add to cart button)
+- A checkout page
+- A checkout success
+- About
+- Contact
 
 ## Built With
 
 You can list a the tech stack that you've used over here
 
-- [HTML]
-- [CSS]
-- [JavaScript](https://www.javascript.com/)
-- [Wordpress](https://wordpress.com/)
+- HTML
+- CSS
+- JavaScript
+- Wordpress
+- Figma
 
 ## Getting Started
 
 ### Installing
-
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
 1. Clone the repo:
 
@@ -43,8 +55,6 @@ npm install
 ```
 
 ### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
 
 To run the app, run the following commands:
 
@@ -63,11 +73,3 @@ This is where you can leave your social links for people to contact you, such as
 [My Twitter page](www.twitter.com)
 
 [My LinkedIn page](www.linkedin.com)
-
-## License
-
-You can link to your license file here if you're using one, or mention what license the codebase falls under. If you're unsure then you can simply delete this section.
-
-## Acknowledgments
-
-This is where you can add any acknowledgements if you'd like, such as to people who have helped you or any code snippets you'd like to mention. You can delete this section if you don't have any acknowledgements to make.
