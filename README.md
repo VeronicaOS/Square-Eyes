@@ -53,4 +53,5 @@ Add the Live Server extension in VS Code or simply drag the index.html file into
 
 ## Contact
 
-[My LinkedIn page](www.linkedin.com)
+[My email address](verols51029@stud.noroff.no)
+
