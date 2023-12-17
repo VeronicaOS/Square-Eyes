@@ -49,12 +49,8 @@ git clone git@github.com:VeronicaOS/Square-Eyes.git
 
 To run the app, run the following commands:
 
-```bash
-Run Live Server on VS Code
-```
+Add the Live Server extension in VS Code or simply drag the index.html file into an open browser.
 
 ## Contact
-
-[My Twitter page](www.twitter.com)
 
 [My LinkedIn page](www.linkedin.com)
