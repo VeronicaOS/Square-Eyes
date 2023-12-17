@@ -1,7 +1,6 @@
 # Square Eyes
 
-<img width="1079" alt="Screenshot 2023-12-14 at 15 29 45" src="https://github.com/VeronicaOS/Square-Eyes/assets/126082037/aadea387-f091-4c6c-834c-5ecf2f466766">
-
+![square-eyes](https://github.com/VeronicaOS/Square-Eyes/assets/126082037/e59b5626-a89b-46d2-8447-91eb51bc02ce)
 
 For this project I had to make a webpage for the fictional company Square Eyes - a website where you can buy and then stream those movies.
 
